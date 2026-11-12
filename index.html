@@ -153,57 +153,105 @@
           </div>
         </div>
 
-        <!-- Corporate Hero Visual Card / Stats Matrix -->
-        <div class="lg:col-span-5">
-          <div class="bg-gradient-to-br from-slate-900/90 to-slate-800/80 p-8 rounded-2xl border border-slate-700/60 shadow-2xl backdrop-blur-xl relative">
-            <div class="absolute -top-3 -right-3 bg-teal-500 text-slate-900 font-bold text-xs uppercase px-3 py-1 rounded-full shadow-lg">
-              Enterprise Ready
+        <!-- High-End 3D Interactive Cyber-Globe & Telemetry Command Center -->
+        <div class="lg:col-span-5 relative">
+          <!-- Aurora Light Halo -->
+          <div class="aurora-glow -top-10 -left-10"></div>
+          
+          <div class="relative bg-gradient-to-br from-slate-900/95 via-slate-900/90 to-slate-950/95 p-6 sm:p-7 rounded-3xl border border-slate-700/70 shadow-2xl backdrop-blur-2xl overflow-hidden card-3d spotlight-card">
+            
+            <!-- Top Command Strip -->
+            <div class="flex items-center justify-between border-b border-slate-800 pb-4 mb-3">
+              <div class="flex items-center gap-2.5">
+                <span class="pulse-badge-live text-xs font-bold text-emerald-400">GLOBAL DELIVERY ACTIVE</span>
+                <span class="text-slate-500 text-xs">|</span>
+                <span class="text-xs text-slate-400 font-mono">NODE: MYSORE-HQ</span>
+              </div>
+              <div class="flex items-center gap-1.5 bg-slate-800/80 px-2.5 py-1 rounded-full border border-slate-700/60 text-[11px] text-cyan-300 font-mono">
+                <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+                <span id="liveLatencyPing">12ms</span>
+              </div>
+            </div>
+
+            <!-- Interactive 3D Cyber-Globe Canvas Container -->
+            <div class="relative w-full h-[320px] flex items-center justify-center">
+              <canvas id="heroGlobeCanvas"></canvas>
+              
+              <!-- Floating Telemetry Pod Top Right -->
+              <div class="absolute top-2 right-2 bg-slate-900/90 backdrop-blur-md border border-slate-700/80 rounded-xl p-3 shadow-xl max-w-[170px] pointer-events-none transform hover:scale-105 transition-all">
+                <div class="text-[10px] uppercase font-bold text-slate-400 tracking-wider">SLA Adherence</div>
+                <div class="text-lg font-black text-teal-400 counter-value mt-0.5" data-target="99.8" data-decimals="1" data-suffix="%">99.8%</div>
+                <!-- Animated Live Waveform SVG -->
+                <svg class="w-full h-5 mt-1 overflow-visible" viewBox="0 0 100 20">
+                  <path d="M0,10 Q25,0 50,12 T100,8" fill="none" stroke="#0D9488" stroke-width="2" class="live-wave-path" />
+                </svg>
+              </div>
+
+              <!-- Floating Telemetry Pod Bottom Left -->
+              <div class="absolute bottom-2 left-2 bg-slate-900/90 backdrop-blur-md border border-slate-700/80 rounded-xl p-3 shadow-xl max-w-[170px] pointer-events-none">
+                <div class="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Enterprise Scale</div>
+                <div class="text-lg font-black text-cyan-400 counter-value mt-0.5" data-target="150" data-suffix="+">150+</div>
+                <div class="text-[10px] text-slate-400 mt-0.5">Engineers &amp; Pods</div>
+              </div>
+            </div>
+
+            <!-- Bottom Delivery Matrix Stats Strip -->
+            <div class="grid grid-cols-3 gap-2 pt-4 border-t border-slate-800 text-center">
+              <div class="p-2.5 bg-slate-800/40 rounded-xl border border-slate-800">
+                <div class="text-base font-extrabold text-cyan-400 counter-value" data-target="100" data-suffix="%">100%</div>
+                <div class="text-[10px] uppercase text-slate-400 tracking-wider mt-0.5">Client Focus</div>
+              </div>
+              <div class="p-2.5 bg-slate-800/40 rounded-xl border border-slate-800">
+                <div class="text-base font-extrabold text-amber-400 counter-value" data-target="6" data-suffix="+">6+</div>
+                <div class="text-[10px] uppercase text-slate-400 tracking-wider mt-0.5">Industry Sectors</div>
+              </div>
+              <div class="p-2.5 bg-slate-800/40 rounded-xl border border-slate-800">
+                <div class="text-base font-extrabold text-emerald-400">24/7</div>
+                <div class="text-[10px] uppercase text-slate-400 tracking-wider mt-0.5">SLA Coverage</div>
+              </div>
             </div>
             
-            <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
-              <span class="w-2.5 h-2.5 rounded-full bg-teal-400"></span>
-              Operational Delivery Matrix
-            </h3>
-
-            <div class="grid grid-cols-2 gap-4 mb-6">
-              <div class="stat-box">
-                <div class="text-3xl font-extrabold text-cyan-400 counter-value" data-target="100" data-suffix="%">100%</div>
-                <div class="text-xs uppercase text-slate-400 tracking-wider mt-1">Client Centricity</div>
-              </div>
-              <div class="stat-box">
-                <div class="text-3xl font-extrabold text-teal-400 counter-value" data-target="99.8" data-decimals="1" data-suffix="%">99.8%</div>
-                <div class="text-xs uppercase text-slate-400 tracking-wider mt-1">SLA Adherence</div>
-              </div>
-              <div class="stat-box">
-                <div class="text-3xl font-extrabold text-amber-400 counter-value" data-target="6" data-suffix="+">6+</div>
-                <div class="text-xs uppercase text-slate-400 tracking-wider mt-1">Industry Verticals</div>
-              </div>
-              <div class="stat-box">
-                <div class="text-3xl font-extrabold text-emerald-400 flex items-center justify-center gap-1">
-                  <span>24/7</span>
-                  <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-                </div>
-                <div class="text-xs uppercase text-slate-400 tracking-wider mt-1">Support Reliability</div>
-              </div>
-            </div>
-
-            <div class="p-4 bg-slate-900/60 rounded-xl border border-slate-700/50 text-xs text-slate-300 space-y-2">
-              <div class="flex justify-between items-center text-slate-400">
-                <span>Infrastructure &amp; Tech Capabilities:</span>
-                <span class="text-teal-300 font-semibold">Active &amp; Scalable</span>
-              </div>
-              <div class="w-full bg-slate-800 rounded-full h-1.5 overflow-hidden">
-                <div class="bg-gradient-to-r from-teal-500 to-cyan-400 h-1.5 rounded-full w-full"></div>
-              </div>
-              <p class="text-[11px] text-slate-400 pt-1">
-                Delivering hybrid onsite/offshore execution models with complete compliance, agility, and technical integrity.
-              </p>
+            <div class="text-center pt-2">
+              <span class="text-[10px] text-slate-500 font-mono tracking-wider">&bull; Drag globe to rotate &bull; Real-time geodetic telemetry</span>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- ENTERPRISE ECOSYSTEM MARQUEE RIBBON -->
+  <div class="bg-slate-950 border-y border-slate-800/80 py-5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 mb-2 flex items-center justify-between text-xs font-semibold text-slate-400 uppercase tracking-widest">
+      <span class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-teal-400"></span> Enterprise Technologies &amp; Standards</span>
+      <span class="hidden md:inline text-[11px] text-slate-500 lowercase">certified architectures &amp; scalable frameworks</span>
+    </div>
+    <div class="marquee-container py-2">
+      <div class="marquee-track items-center text-xs sm:text-sm font-extrabold tracking-wider text-slate-400">
+        <span class="flex items-center gap-2 hover:text-cyan-400 transition-colors"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>SAP S/4HANA</span>
+        <span class="flex items-center gap-2 hover:text-cyan-400 transition-colors"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>AWS CLOUD ARCHITECTURE</span>
+        <span class="flex items-center gap-2 hover:text-cyan-400 transition-colors"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>ORACLE CLOUD ERP</span>
+        <span class="flex items-center gap-2 hover:text-cyan-400 transition-colors"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>MICROSOFT AZURE</span>
+        <span class="flex items-center gap-2 hover:text-cyan-400 transition-colors"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>KUBERNETES &amp; DOCKER</span>
+        <span class="flex items-center gap-2 hover:text-cyan-400 transition-colors"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>REACT NATIVE &amp; FLUTTER</span>
+        <span class="flex items-center gap-2 hover:text-cyan-400 transition-colors"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>MICROSOFT DYNAMICS 365</span>
+        <span class="flex items-center gap-2 hover:text-cyan-400 transition-colors"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>APACHE KAFKA</span>
+        <span class="flex items-center gap-2 hover:text-cyan-400 transition-colors"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>SNOWFLAKE DATA CLOUD</span>
+        <span class="flex items-center gap-2 hover:text-cyan-400 transition-colors"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>ISO 9001 / 27001</span>
+        <!-- Loop copy -->
+        <span class="flex items-center gap-2 hover:text-cyan-400 transition-colors"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>SAP S/4HANA</span>
+        <span class="flex items-center gap-2 hover:text-cyan-400 transition-colors"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>AWS CLOUD ARCHITECTURE</span>
+        <span class="flex items-center gap-2 hover:text-cyan-400 transition-colors"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>ORACLE CLOUD ERP</span>
+        <span class="flex items-center gap-2 hover:text-cyan-400 transition-colors"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>MICROSOFT AZURE</span>
+        <span class="flex items-center gap-2 hover:text-cyan-400 transition-colors"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>KUBERNETES &amp; DOCKER</span>
+        <span class="flex items-center gap-2 hover:text-cyan-400 transition-colors"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>REACT NATIVE &amp; FLUTTER</span>
+        <span class="flex items-center gap-2 hover:text-cyan-400 transition-colors"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>MICROSOFT DYNAMICS 365</span>
+        <span class="flex items-center gap-2 hover:text-cyan-400 transition-colors"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>APACHE KAFKA</span>
+        <span class="flex items-center gap-2 hover:text-cyan-400 transition-colors"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>SNOWFLAKE DATA CLOUD</span>
+        <span class="flex items-center gap-2 hover:text-cyan-400 transition-colors"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>ISO 9001 / 27001</span>
+      </div>
+    </div>
+  </div>
 
   <!-- ABOUT US SUMMARY TEASER -->
   <section class="py-20 bg-white">
@@ -294,118 +342,166 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- 1. Mobile Application Development -->
-        <div class="corporate-card p-8">
-          <div class="icon-badge mb-6">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+        <div class="corporate-card p-8 card-3d spotlight-card">
+          <div class="flex items-center justify-between mb-6">
+            <div class="icon-badge">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+            </div>
+            <span class="text-[10px] bg-teal-50 text-teal-700 border border-teal-200 font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Zero-Latency Sync</span>
           </div>
-          <h3 class="text-xl font-bold text-slate-900 mb-3">Mobile Application Development</h3>
-          <p class="text-slate-600 text-sm leading-relaxed mb-6">
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Mobile Application Development</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
             Native iOS, Android, and cross-platform enterprise mobile applications that deliver frictionless user experiences, robust data security, and seamless API integrations.
           </p>
+          <div class="flex flex-wrap gap-1.5 mb-5">
+            <span class="text-[10px] font-semibold bg-slate-100 text-slate-700 px-2 py-0.5 rounded">Swift</span>
+            <span class="text-[10px] font-semibold bg-slate-100 text-slate-700 px-2 py-0.5 rounded">Kotlin</span>
+            <span class="text-[10px] font-semibold bg-slate-100 text-slate-700 px-2 py-0.5 rounded">Flutter</span>
+            <span class="text-[10px] font-semibold bg-slate-100 text-slate-700 px-2 py-0.5 rounded">React Native</span>
+          </div>
           <ul class="text-xs text-slate-500 space-y-2 mb-6 border-t border-slate-100 pt-4">
             <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal-500"></span>iOS &amp; Android Native Architecture</li>
-            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal-500"></span>React Native &amp; Flutter Engineering</li>
-            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal-500"></span>Enterprise Mobility Management</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal-500"></span>Enterprise Mobility &amp; MDM Integration</li>
           </ul>
-          <a href="solutions.html#mobile-app" class="text-sm font-semibold text-teal-600 hover:text-teal-800 flex items-center gap-1">
-            Learn more <span>&rarr;</span>
+          <a href="solutions.html#mobile-app" class="text-sm font-semibold text-teal-600 hover:text-teal-800 flex items-center gap-1 group">
+            <span>Explore Architecture</span> <span class="transform group-hover:translate-x-1 transition-transform">&rarr;</span>
           </a>
         </div>
 
         <!-- 2. Web Application Development -->
-        <div class="corporate-card p-8">
-          <div class="icon-badge mb-6">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+        <div class="corporate-card p-8 card-3d spotlight-card">
+          <div class="flex items-center justify-between mb-6">
+            <div class="icon-badge">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+            </div>
+            <span class="text-[10px] bg-cyan-50 text-cyan-700 border border-cyan-200 font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Sub-50ms Microservices</span>
           </div>
-          <h3 class="text-xl font-bold text-slate-900 mb-3">Web Application Development</h3>
-          <p class="text-slate-600 text-sm leading-relaxed mb-6">
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Web Application Development</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
             Scalable, responsive web platforms and cloud-native portals engineered with modern microservices, hardened security, and high transactional throughput.
           </p>
+          <div class="flex flex-wrap gap-1.5 mb-5">
+            <span class="text-[10px] font-semibold bg-slate-100 text-slate-700 px-2 py-0.5 rounded">Next.js</span>
+            <span class="text-[10px] font-semibold bg-slate-100 text-slate-700 px-2 py-0.5 rounded">TypeScript</span>
+            <span class="text-[10px] font-semibold bg-slate-100 text-slate-700 px-2 py-0.5 rounded">Node / Java</span>
+            <span class="text-[10px] font-semibold bg-slate-100 text-slate-700 px-2 py-0.5 rounded">GraphQL / REST</span>
+          </div>
           <ul class="text-xs text-slate-500 space-y-2 mb-6 border-t border-slate-100 pt-4">
-            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal-500"></span>Cloud-Native SPA &amp; Portals</li>
-            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal-500"></span>Microservices &amp; RESTful/GraphQL APIs</li>
-            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal-500"></span>High-Availability Enterprise Web Apps</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal-500"></span>Cloud-Native SPA &amp; Enterprise Portals</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal-500"></span>High-Availability Distributed Backends</li>
           </ul>
-          <a href="solutions.html#web-app" class="text-sm font-semibold text-teal-600 hover:text-teal-800 flex items-center gap-1">
-            Learn more <span>&rarr;</span>
+          <a href="solutions.html#web-app" class="text-sm font-semibold text-teal-600 hover:text-teal-800 flex items-center gap-1 group">
+            <span>Explore Architecture</span> <span class="transform group-hover:translate-x-1 transition-transform">&rarr;</span>
           </a>
         </div>
 
         <!-- 3. ERP Solutions & Support -->
-        <div class="corporate-card p-8">
-          <div class="icon-badge mb-6">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+        <div class="corporate-card p-8 card-3d spotlight-card">
+          <div class="flex items-center justify-between mb-6">
+            <div class="icon-badge">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+            </div>
+            <span class="text-[10px] bg-blue-50 text-blue-700 border border-blue-200 font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">24/7 SLA Managed</span>
           </div>
-          <h3 class="text-xl font-bold text-slate-900 mb-3">ERP Solutions &amp; Support</h3>
-          <p class="text-slate-600 text-sm leading-relaxed mb-6">
+          <h3 class="text-xl font-bold text-slate-900 mb-2">ERP Solutions &amp; Support</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
             Complete ERP deployment, custom module development, migration, and 24/7 technical maintenance for SAP, Oracle, and Microsoft Dynamics environments.
           </p>
+          <div class="flex flex-wrap gap-1.5 mb-5">
+            <span class="text-[10px] font-semibold bg-slate-100 text-slate-700 px-2 py-0.5 rounded">SAP S/4HANA</span>
+            <span class="text-[10px] font-semibold bg-slate-100 text-slate-700 px-2 py-0.5 rounded">Oracle Cloud ERP</span>
+            <span class="text-[10px] font-semibold bg-slate-100 text-slate-700 px-2 py-0.5 rounded">Dynamics 365</span>
+          </div>
           <ul class="text-xs text-slate-500 space-y-2 mb-6 border-t border-slate-100 pt-4">
-            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal-500"></span>ERP Implementation &amp; Rollout</li>
             <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal-500"></span>Legacy Migration &amp; Data Integration</li>
-            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal-500"></span>Post-Deployment 24/7 SLA Support</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal-500"></span>Post-Deployment 24/7 Functional SLA</li>
           </ul>
-          <a href="solutions.html#erp-solutions" class="text-sm font-semibold text-teal-600 hover:text-teal-800 flex items-center gap-1">
-            Learn more <span>&rarr;</span>
+          <a href="solutions.html#erp-solutions" class="text-sm font-semibold text-teal-600 hover:text-teal-800 flex items-center gap-1 group">
+            <span>Explore Architecture</span> <span class="transform group-hover:translate-x-1 transition-transform">&rarr;</span>
           </a>
         </div>
 
         <!-- 4. Digital Transformation -->
-        <div class="corporate-card p-8">
-          <div class="icon-badge mb-6">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        <div class="corporate-card p-8 card-3d spotlight-card">
+          <div class="flex items-center justify-between mb-6">
+            <div class="icon-badge">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <span class="text-[10px] bg-emerald-50 text-emerald-700 border border-emerald-200 font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Cloud-Native Scale</span>
           </div>
-          <h3 class="text-xl font-bold text-slate-900 mb-3">Digital Transformation</h3>
-          <p class="text-slate-600 text-sm leading-relaxed mb-6">
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Digital Transformation</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
             Strategic digital roadmaps that modernize core legacy workflows, transition workloads to scalable cloud platforms, and introduce automated intelligence.
           </p>
+          <div class="flex flex-wrap gap-1.5 mb-5">
+            <span class="text-[10px] font-semibold bg-slate-100 text-slate-700 px-2 py-0.5 rounded">Docker / K8s</span>
+            <span class="text-[10px] font-semibold bg-slate-100 text-slate-700 px-2 py-0.5 rounded">AWS / Azure</span>
+            <span class="text-[10px] font-semibold bg-slate-100 text-slate-700 px-2 py-0.5 rounded">Kafka</span>
+            <span class="text-[10px] font-semibold bg-slate-100 text-slate-700 px-2 py-0.5 rounded">Snowflake</span>
+          </div>
           <ul class="text-xs text-slate-500 space-y-2 mb-6 border-t border-slate-100 pt-4">
             <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal-500"></span>Legacy Modernization &amp; Cloud Migration</li>
             <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal-500"></span>Intelligent Process Automation</li>
-            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal-500"></span>Data Analytics &amp; Decision Engines</li>
           </ul>
-          <a href="solutions.html#digital-transformation" class="text-sm font-semibold text-teal-600 hover:text-teal-800 flex items-center gap-1">
-            Learn more <span>&rarr;</span>
+          <a href="solutions.html#digital-transformation" class="text-sm font-semibold text-teal-600 hover:text-teal-800 flex items-center gap-1 group">
+            <span>Explore Architecture</span> <span class="transform group-hover:translate-x-1 transition-transform">&rarr;</span>
           </a>
         </div>
 
         <!-- 5. Technology Consulting -->
-        <div class="corporate-card p-8">
-          <div class="icon-badge mb-6">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        <div class="corporate-card p-8 card-3d spotlight-card">
+          <div class="flex items-center justify-between mb-6">
+            <div class="icon-badge">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            </div>
+            <span class="text-[10px] bg-purple-50 text-purple-700 border border-purple-200 font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Zero-Trust Hardened</span>
           </div>
-          <h3 class="text-xl font-bold text-slate-900 mb-3">Technology Consulting</h3>
-          <p class="text-slate-600 text-sm leading-relaxed mb-6">
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Technology Consulting</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
             Enterprise architecture design, infrastructure planning, technology risk assessment, cyber posture reviews, and continuous DevOps pipeline enablement.
           </p>
+          <div class="flex flex-wrap gap-1.5 mb-5">
+            <span class="text-[10px] font-semibold bg-slate-100 text-slate-700 px-2 py-0.5 rounded">Architecture</span>
+            <span class="text-[10px] font-semibold bg-slate-100 text-slate-700 px-2 py-0.5 rounded">DevSecOps</span>
+            <span class="text-[10px] font-semibold bg-slate-100 text-slate-700 px-2 py-0.5 rounded">ISO 27001</span>
+            <span class="text-[10px] font-semibold bg-slate-100 text-slate-700 px-2 py-0.5 rounded">Terraform</span>
+          </div>
           <ul class="text-xs text-slate-500 space-y-2 mb-6 border-t border-slate-100 pt-4">
-            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal-500"></span>Architecture &amp; Tech Stack Selection</li>
             <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal-500"></span>Security, Compliance &amp; Governance</li>
             <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal-500"></span>DevOps &amp; Infrastructure Optimization</li>
           </ul>
-          <a href="solutions.html#tech-consulting" class="text-sm font-semibold text-teal-600 hover:text-teal-800 flex items-center gap-1">
-            Learn more <span>&rarr;</span>
+          <a href="solutions.html#tech-consulting" class="text-sm font-semibold text-teal-600 hover:text-teal-800 flex items-center gap-1 group">
+            <span>Explore Architecture</span> <span class="transform group-hover:translate-x-1 transition-transform">&rarr;</span>
           </a>
         </div>
 
         <!-- 6. Business Process Solutions -->
-        <div class="corporate-card p-8">
-          <div class="icon-badge mb-6">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+        <div class="corporate-card p-8 card-3d spotlight-card">
+          <div class="flex items-center justify-between mb-6">
+            <div class="icon-badge">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+            </div>
+            <span class="text-[10px] bg-amber-50 text-amber-700 border border-amber-200 font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">40% Cycle Reduction</span>
           </div>
-          <h3 class="text-xl font-bold text-slate-900 mb-3">Business Process Solutions</h3>
-          <p class="text-slate-600 text-sm leading-relaxed mb-6">
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Business Process Solutions</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
             Optimizing operational throughput, removing manual friction, reducing execution costs, and instituting automated business process management (BPM).
           </p>
+          <div class="flex flex-wrap gap-1.5 mb-5">
+            <span class="text-[10px] font-semibold bg-slate-100 text-slate-700 px-2 py-0.5 rounded">BPM Engines</span>
+            <span class="text-[10px] font-semibold bg-slate-100 text-slate-700 px-2 py-0.5 rounded">RPA Workflow</span>
+            <span class="text-[10px] font-semibold bg-slate-100 text-slate-700 px-2 py-0.5 rounded">Order-to-Cash</span>
+            <span class="text-[10px] font-semibold bg-slate-100 text-slate-700 px-2 py-0.5 rounded">SLA Tracing</span>
+          </div>
           <ul class="text-xs text-slate-500 space-y-2 mb-6 border-t border-slate-100 pt-4">
             <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal-500"></span>Workflow Modeling &amp; Optimization</li>
-            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal-500"></span>SLA-Driven Process Execution</li>
             <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal-500"></span>Cost Reduction &amp; Cycle Time Auditing</li>
           </ul>
-          <a href="solutions.html#business-process" class="text-sm font-semibold text-teal-600 hover:text-teal-800 flex items-center gap-1">
-            Learn more <span>&rarr;</span>
+          <a href="solutions.html#business-process" class="text-sm font-semibold text-teal-600 hover:text-teal-800 flex items-center gap-1 group">
+            <span>Explore Architecture</span> <span class="transform group-hover:translate-x-1 transition-transform">&rarr;</span>
           </a>
         </div>
+      </div>
       </div>
     </div>
   </section>

@@ -490,16 +490,33 @@ h1, h2, h3, h4, h5, h6 {
    MOTION GRAPHICS & ADVANCED INTERACTIVE UI (UI/UX PRO MAX)
    ========================================================================== */
 
-/* 1. Hero Ambient Mesh Canvas */
-#heroMeshCanvas {
-  position: absolute;
-  top: 0;
-  left: 0;
+/* 1. Hero Ambient Mesh & 3D Cyber-Globe Canvas */
+#heroGlobeCanvas {
   width: 100%;
   height: 100%;
+  max-height: 480px;
+  cursor: grab;
+  touch-action: none;
+}
+
+#heroGlobeCanvas:active {
+  cursor: grabbing;
+}
+
+.aurora-glow {
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(14, 165, 233, 0.22) 0%, rgba(13, 148, 136, 0.16) 45%, transparent 70%);
+  filter: blur(75px);
   pointer-events: none;
-  z-index: 2;
-  opacity: 0.65;
+  animation: auroraPulse 10s infinite alternate ease-in-out;
+}
+
+@keyframes auroraPulse {
+  0% { transform: scale(0.9) translate(-10px, -10px); }
+  100% { transform: scale(1.1) translate(15px, 15px); }
 }
 
 /* 2. Kinetic Capability Rotator */
@@ -509,7 +526,7 @@ h1, h2, h3, h4, h5, h6 {
   vertical-align: bottom;
   height: 1.25em;
   overflow: hidden;
-  min-width: 280px;
+  min-width: 290px;
 }
 
 #capabilityRotator {
@@ -528,13 +545,23 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 1;
 }
 
-/* 3. Interactive Card Spotlight / Border Glow (Stripe / Linear Effect) */
-.corporate-card, .stat-box {
+/* 3. High-End 3D Card Tilt & Specular Spotlight */
+.card-3d-wrap {
+  perspective: 1200px;
+  transform-style: preserve-3d;
+}
+
+.card-3d {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+  will-change: transform;
+}
+
+.spotlight-card {
   position: relative;
   overflow: hidden;
 }
 
-.corporate-card::after {
+.spotlight-card::after {
   content: '';
   position: absolute;
   top: 0;
@@ -543,21 +570,118 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0;
   border-radius: inherit;
   background: radial-gradient(
-    400px circle at var(--mouse-x, -500px) var(--mouse-y, -500px),
-    rgba(14, 165, 233, 0.12),
-    transparent 50%
+    420px circle at var(--mouse-x, -500px) var(--mouse-y, -500px),
+    rgba(14, 165, 233, 0.15),
+    transparent 55%
   );
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.3s ease;
-  z-index: 1;
+  z-index: 2;
 }
 
-.corporate-card:hover::after {
+.spotlight-card:hover::after {
   opacity: 1;
 }
 
-/* 4. Scroll-Driven Reveal (Staggered Fade-Up) */
+/* 4. Infinite Enterprise Partner Marquee */
+.marquee-container {
+  overflow: hidden;
+  position: relative;
+  mask-image: linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%);
+}
+
+.marquee-track {
+  display: flex;
+  gap: 3.5rem;
+  width: max-content;
+  animation: marqueeLoop 30s linear infinite;
+  will-change: transform;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marqueeLoop {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* 5. Live Architecture Circuit Waves */
+.live-wave-path {
+  stroke-dasharray: 8 4;
+  animation: waveDash 1.4s linear infinite;
+}
+
+@keyframes waveDash {
+  to {
+    stroke-dashoffset: -12;
+  }
+}
+
+.pulse-badge-live {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pulse-badge-live::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #10B981;
+  box-shadow: 0 0 8px #10B981;
+}
+
+.pulse-badge-live::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #10B981;
+  animation: pingDot 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes pingDot {
+  75%, 100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+/* 6. High-Tech Bento Cards */
+.bento-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 18px;
+  transition: var(--transition);
+  position: relative;
+}
+
+.bento-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 35px -10px rgba(10, 25, 47, 0.1);
+  border-color: #CBD5E1;
+}
+
+.bento-card-dark {
+  background: linear-gradient(145deg, #0F2038 0%, #081324 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.4);
+}
+
+.bento-card-dark:hover {
+  border-color: rgba(56, 189, 248, 0.4);
+  box-shadow: 0 25px 50px -12px rgba(14, 165, 233, 0.22);
+}
+
+/* 7. Scroll-Driven Reveal (Staggered Fade-Up) */
 .reveal-on-scroll {
   opacity: 0;
   transform: translateY(22px);
@@ -576,7 +700,7 @@ h1, h2, h3, h4, h5, h6 {
 .delay-250 { transition-delay: 250ms; }
 .delay-300 { transition-delay: 300ms; }
 
-/* 5. Floating Action Pill (WhatsApp & Inquiries) */
+/* 8. Floating Action Pill (WhatsApp & Inquiries) */
 .floating-inquiry-pill {
   position: fixed;
   bottom: 24px;

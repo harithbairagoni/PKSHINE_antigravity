@@ -1,5 +1,5 @@
 /**
- * Peacock Shine Private Limited - Corporate Consulting JavaScript & Motion Engine
+ * Peacock Shine Private Limited - High-End Corporate Consulting & 3D Motion Engine
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     span.textContent = currentYear;
   });
 
-  // 2. Sticky Navbar Blur & Shadow on Scroll
+  // 2. Sticky Navbar with Blur & Shadow
   const navbar = document.querySelector('.navbar-wrapper');
   window.addEventListener('scroll', () => {
     if (window.scrollY > 20) {
@@ -120,136 +120,309 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // =========================================================================
-  // MOTION GRAPHICS & ADVANCED UI INTERACTIVITY (UI/UX PRO MAX)
+  // HIGH-END 3D CYBER-GLOBE & MOTION GRAPHICS (UI/UX PRO MAX)
   // =========================================================================
 
-  // A. Check for Reduced Motion Preference
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // B. Ambient Interactive Hero Mesh Canvas
-  const canvas = document.getElementById('heroMeshCanvas');
-  if (canvas && !prefersReducedMotion) {
-    const ctx = canvas.getContext('2d');
-    let width, height;
-    let particles = [];
-    let animationFrameId;
-    let mouse = { x: null, y: null, radius: 140 };
+  // A. Interactive 3D Enterprise Cyber-Globe on Canvas
+  const globeCanvas = document.getElementById('heroGlobeCanvas');
+  if (globeCanvas && !prefersReducedMotion) {
+    const ctx = globeCanvas.getContext('2d');
+    let width, height, globeRadius;
+    let animId;
 
-    function resizeCanvas() {
-      width = canvas.width = canvas.parentElement.offsetWidth;
-      height = canvas.height = canvas.parentElement.offsetHeight;
-      initParticles();
-    }
+    // Rotation angles and inertia
+    let rotX = 0.25;
+    let rotY = 0.4;
+    let targetRotX = rotX;
+    let targetRotY = rotY;
+    let isDragging = false;
+    let prevMouseX = 0;
+    let prevMouseY = 0;
 
-    class Particle {
-      constructor() {
-        this.x = Math.random() * width;
-        this.y = Math.random() * height;
-        this.vx = (Math.random() - 0.5) * 0.45;
-        this.vy = (Math.random() - 0.5) * 0.45;
-        this.radius = Math.random() * 1.8 + 1;
-        this.color = Math.random() > 0.5 ? 'rgba(56, 189, 248, ' : 'rgba(20, 184, 166, ';
-      }
+    // Hubs (lat/long) for international enterprise points
+    const hubs = [
+      { name: 'Mysore/HQ', lat: 12.11, lon: 76.67, color: '#38BDF8', size: 5, pulse: true },
+      { name: 'Bangalore', lat: 12.97, lon: 77.59, color: '#2DD4BF', size: 4 },
+      { name: 'New York', lat: 40.71, lon: -74.00, color: '#38BDF8', size: 4.5 },
+      { name: 'London', lat: 51.50, lon: -0.12, color: '#38BDF8', size: 4 },
+      { name: 'Frankfurt', lat: 50.11, lon: 8.68, color: '#2DD4BF', size: 4 },
+      { name: 'Singapore', lat: 1.35, lon: 103.81, color: '#38BDF8', size: 4 },
+      { name: 'Tokyo', lat: 35.67, lon: 139.65, color: '#38BDF8', size: 4 }
+    ];
 
-      update() {
-        this.x += this.vx;
-        this.y += this.vy;
+    // Connection Arcs between hubs
+    const connections = [
+      [0, 2], // Mysore -> New York
+      [0, 3], // Mysore -> London
+      [0, 4], // Mysore -> Frankfurt
+      [0, 5], // Mysore -> Singapore
+      [5, 6], // Singapore -> Tokyo
+      [2, 3]  // NY -> London
+    ];
 
-        if (this.x < 0 || this.x > width) this.vx *= -1;
-        if (this.y < 0 || this.y > height) this.vy *= -1;
-
-        // Gentle Mouse Interaction
-        if (mouse.x !== null && mouse.y !== null) {
-          let dx = mouse.x - this.x;
-          let dy = mouse.y - this.y;
-          let distance = Math.sqrt(dx * dx + dy * dy);
-          if (distance < mouse.radius) {
-            let force = (mouse.radius - distance) / mouse.radius;
-            this.x -= (dx / distance) * force * 1.5;
-            this.y -= (dy / distance) * force * 1.5;
-          }
+    // Sphere grid dots
+    let dots = [];
+    function generateSphereDots() {
+      dots = [];
+      const latStep = 14;
+      const lonStep = 18;
+      for (let lat = -80; lat <= 80; lat += latStep) {
+        const phi = (90 - lat) * (Math.PI / 180);
+        const r = Math.sin(phi);
+        const y = Math.cos(phi);
+        for (let lon = -180; lon < 180; lon += lonStep) {
+          const theta = lon * (Math.PI / 180);
+          dots.push({
+            x: r * Math.sin(theta),
+            y: y,
+            z: r * Math.cos(theta)
+          });
         }
       }
-
-      draw() {
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-        ctx.fillStyle = this.color + '0.75)';
-        ctx.fill();
-      }
     }
 
-    function initParticles() {
-      particles = [];
-      const particleCount = Math.floor((width * height) / 18000);
-      const count = Math.min(Math.max(particleCount, 25), 65);
-      for (let i = 0; i < count; i++) {
-        particles.push(new Particle());
-      }
+    function resizeGlobe() {
+      const container = globeCanvas.parentElement;
+      width = globeCanvas.width = container.offsetWidth;
+      height = globeCanvas.height = container.offsetHeight || 420;
+      globeRadius = Math.min(width, height) * 0.38;
+      generateSphereDots();
     }
 
-    function drawLines() {
-      for (let i = 0; i < particles.length; i++) {
-        for (let j = i + 1; j < particles.length; j++) {
-          const dx = particles[i].x - particles[j].x;
-          const dy = particles[i].y - particles[j].y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
+    function latLonToVector(lat, lon) {
+      const phi = (90 - lat) * (Math.PI / 180);
+      const theta = lon * (Math.PI / 180);
+      return {
+        x: Math.sin(phi) * Math.sin(theta),
+        y: Math.cos(phi),
+        z: Math.sin(phi) * Math.cos(theta)
+      };
+    }
 
-          if (dist < 115) {
-            const alpha = (1 - dist / 115) * 0.22;
+    function rotatePoint(p, rx, ry) {
+      // Rotate around X
+      const cosX = Math.cos(rx);
+      const sinX = Math.sin(rx);
+      const y1 = p.y * cosX - p.z * sinX;
+      const z1 = p.y * sinX + p.z * cosX;
+
+      // Rotate around Y
+      const cosY = Math.cos(ry);
+      const sinY = Math.sin(ry);
+      const x2 = p.x * cosY + z1 * sinY;
+      const z2 = -p.x * sinY + z1 * cosY;
+
+      return { x: x2, y: y1, z: z2 };
+    }
+
+    let pulseTime = 0;
+
+    function renderGlobe() {
+      ctx.clearRect(0, 0, width, height);
+
+      // Auto rotation when not dragging
+      if (!isDragging) {
+        targetRotY += 0.004;
+      }
+      rotX += (targetRotX - rotX) * 0.08;
+      rotY += (targetRotY - rotY) * 0.08;
+      pulseTime += 0.04;
+
+      const cx = width / 2;
+      const cy = height / 2;
+
+      // Ambient outer sphere glow
+      const glowGrad = ctx.createRadialGradient(cx, cy, globeRadius * 0.7, cx, cy, globeRadius * 1.3);
+      glowGrad.addColorStop(0, 'rgba(14, 165, 233, 0.08)');
+      glowGrad.addColorStop(0.5, 'rgba(13, 148, 136, 0.04)');
+      glowGrad.addColorStop(1, 'transparent');
+      ctx.fillStyle = glowGrad;
+      ctx.beginPath();
+      ctx.arc(cx, cy, globeRadius * 1.25, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Outer boundary ring
+      ctx.beginPath();
+      ctx.arc(cx, cy, globeRadius, 0, Math.PI * 2);
+      ctx.strokeStyle = 'rgba(56, 189, 248, 0.15)';
+      ctx.lineWidth = 1.2;
+      ctx.stroke();
+
+      // Draw Grid Dots
+      dots.forEach(dot => {
+        const p = rotatePoint(dot, rotX, rotY);
+        // Only draw front hemisphere for clean depth
+        if (p.z > -0.15) {
+          const depth = (p.z + 1) / 2; // 0 to 1
+          const px = cx + p.x * globeRadius;
+          const py = cy - p.y * globeRadius;
+          const size = Math.max(0.6, depth * 1.8);
+          const alpha = Math.max(0.08, depth * 0.65);
+
+          ctx.beginPath();
+          ctx.arc(px, py, size, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(148, 163, 184, ${alpha})`;
+          ctx.fill();
+        }
+      });
+
+      // Transformed hub positions
+      const transformedHubs = hubs.map(hub => {
+        const v = latLonToVector(hub.lat, hub.lon);
+        const p = rotatePoint(v, rotX, rotY);
+        return {
+          ...hub,
+          p: p,
+          px: cx + p.x * globeRadius,
+          py: cy - p.y * globeRadius,
+          visible: p.z > -0.1
+        };
+      });
+
+      // Draw Arcs between hubs
+      connections.forEach(([i, j]) => {
+        const h1 = transformedHubs[i];
+        const h2 = transformedHubs[j];
+        if (h1.visible || h2.visible) {
+          ctx.beginPath();
+          ctx.moveTo(h1.px, h1.py);
+          
+          // Mid-point curve lifted outward from sphere surface
+          const midX = (h1.p.x + h2.p.x) / 2;
+          const midY = (h1.p.y + h2.p.y) / 2;
+          const midZ = (h1.p.z + h2.p.z) / 2;
+          const len = Math.sqrt(midX * midX + midY * midY + midZ * midZ) || 1;
+          const lift = 1.28;
+          const cpX = cx + (midX / len) * globeRadius * lift;
+          const cpY = cy - (midY / len) * globeRadius * lift;
+
+          ctx.quadraticCurveTo(cpX, cpY, h2.px, h2.py);
+          ctx.strokeStyle = 'rgba(56, 189, 248, 0.45)';
+          ctx.lineWidth = 1.4;
+          ctx.stroke();
+
+          // Traveling data pulse particle along curve
+          const t = (pulseTime * 0.6 + (i * 0.3)) % 1;
+          const oneMinusT = 1 - t;
+          const bx = oneMinusT * oneMinusT * h1.px + 2 * oneMinusT * t * cpX + t * t * h2.px;
+          const by = oneMinusT * oneMinusT * h1.py + 2 * oneMinusT * t * cpY + t * t * h2.py;
+
+          ctx.beginPath();
+          ctx.arc(bx, by, 2.8, 0, Math.PI * 2);
+          ctx.fillStyle = '#F59E0B';
+          ctx.shadowColor = '#F59E0B';
+          ctx.shadowBlur = 8;
+          ctx.fill();
+          ctx.shadowBlur = 0; // reset
+        }
+      });
+
+      // Draw Hubs with pulsing telemetry beacons
+      transformedHubs.forEach(hub => {
+        if (hub.visible) {
+          const depth = (hub.p.z + 1) / 2;
+          
+          // Outer pulse ring
+          if (hub.pulse) {
+            const wave = (Math.sin(pulseTime * 2.5) + 1) / 2;
             ctx.beginPath();
-            ctx.moveTo(particles[i].x, particles[i].y);
-            ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(14, 165, 233, ${alpha})`;
-            ctx.lineWidth = 0.8;
+            ctx.arc(hub.px, hub.py, hub.size * 2 + wave * 6, 0, Math.PI * 2);
+            ctx.strokeStyle = `rgba(56, 189, 248, ${0.7 - wave * 0.6})`;
+            ctx.lineWidth = 1.2;
             ctx.stroke();
           }
+
+          // Hub Core Dot
+          ctx.beginPath();
+          ctx.arc(hub.px, hub.py, hub.size * depth, 0, Math.PI * 2);
+          ctx.fillStyle = hub.color;
+          ctx.shadowColor = hub.color;
+          ctx.shadowBlur = 10;
+          ctx.fill();
+          ctx.shadowBlur = 0;
+
+          // Hub Label for HQ
+          if (hub.name.includes('HQ')) {
+            ctx.font = 'bold 11px Plus Jakarta Sans, sans-serif';
+            ctx.fillStyle = '#FFFFFF';
+            ctx.fillText('● Mysore HQ', hub.px + 9, hub.py + 3);
+          }
         }
-      }
+      });
+
+      animId = requestAnimationFrame(renderGlobe);
     }
 
-    function animate() {
-      ctx.clearRect(0, 0, width, height);
-      for (let i = 0; i < particles.length; i++) {
-        particles[i].update();
-        particles[i].draw();
-      }
-      drawLines();
-      animationFrameId = requestAnimationFrame(animate);
-    }
+    // Drag / Touch Controls
+    globeCanvas.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      prevMouseX = e.clientX;
+      prevMouseY = e.clientY;
+    });
 
-    // Pause animation when hero leaves viewport to save battery & CPU
-    const heroSection = canvas.closest('section');
+    window.addEventListener('mouseup', () => {
+      isDragging = false;
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      if (isDragging) {
+        const dx = e.clientX - prevMouseX;
+        const dy = e.clientY - prevMouseY;
+        targetRotY += dx * 0.006;
+        targetRotX = Math.max(-1.1, Math.min(1.1, targetRotX + dy * 0.006));
+        prevMouseX = e.clientX;
+        prevMouseY = e.clientY;
+      }
+    });
+
+    // Touch handlers for mobile
+    globeCanvas.addEventListener('touchstart', (e) => {
+      if (e.touches.length === 1) {
+        isDragging = true;
+        prevMouseX = e.touches[0].clientX;
+        prevMouseY = e.touches[0].clientY;
+      }
+    }, { passive: true });
+
+    window.addEventListener('touchend', () => {
+      isDragging = false;
+    });
+
+    window.addEventListener('touchmove', (e) => {
+      if (isDragging && e.touches.length === 1) {
+        const dx = e.touches[0].clientX - prevMouseX;
+        const dy = e.touches[0].clientY - prevMouseY;
+        targetRotY += dx * 0.007;
+        targetRotX = Math.max(-1.1, Math.min(1.1, targetRotX + dy * 0.007));
+        prevMouseX = e.touches[0].clientX;
+        prevMouseY = e.touches[0].clientY;
+      }
+    }, { passive: true });
+
+    // IntersectionObserver to pause rendering when off-screen
+    const heroSection = globeCanvas.closest('section');
     if (heroSection) {
-      const heroObserver = new IntersectionObserver((entries) => {
+      const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            if (!animationFrameId) animate();
+            if (!animId) renderGlobe();
           } else {
-            cancelAnimationFrame(animationFrameId);
-            animationFrameId = null;
+            cancelAnimationFrame(animId);
+            animId = null;
           }
         });
       }, { threshold: 0.05 });
-      heroObserver.observe(heroSection);
+      observer.observe(heroSection);
     }
 
-    window.addEventListener('resize', resizeCanvas, { passive: true });
-    window.addEventListener('mousemove', (e) => {
-      const rect = canvas.getBoundingClientRect();
-      mouse.x = e.clientX - rect.left;
-      mouse.y = e.clientY - rect.top;
-    }, { passive: true });
-    window.addEventListener('mouseleave', () => {
-      mouse.x = null;
-      mouse.y = null;
-    });
-
-    resizeCanvas();
-    animate();
+    window.addEventListener('resize', resizeGlobe, { passive: true });
+    resizeGlobe();
+    renderGlobe();
   }
 
-  // C. Kinetic Capability Rotator (Hero Title)
+  // B. Kinetic Capability Rotator (Hero Title)
   const capabilityRotator = document.getElementById('capabilityRotator');
   if (capabilityRotator && !prefersReducedMotion) {
     const capabilities = [
@@ -276,7 +449,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 3200);
   }
 
-  // D. Animated Number Counters (0 to Target Metric)
+  // C. Animated Number Counters (0 to Target Metric)
   const counterElements = document.querySelectorAll('.counter-value');
   if (counterElements.length > 0) {
     const counterObserver = new IntersectionObserver((entries, observer) => {
@@ -292,7 +465,6 @@ document.addEventListener('DOMContentLoaded', () => {
           function updateCounter(currentTime) {
             const elapsed = currentTime - startTime;
             const progress = Math.min(elapsed / duration, 1);
-            // Ease-Out Cubic curve
             const easeOutProgress = 1 - Math.pow(1 - progress, 3);
             const currentVal = target * easeOutProgress;
 
@@ -314,19 +486,30 @@ document.addEventListener('DOMContentLoaded', () => {
     counterElements.forEach(el => counterObserver.observe(el));
   }
 
-  // E. Card Cursor Spotlight / Border Glow Tracking
-  const spotlightCards = document.querySelectorAll('.corporate-card, .stat-box');
-  spotlightCards.forEach(card => {
+  // D. 3D Perspective Card Tilt Physics
+  const tiltCards = document.querySelectorAll('.card-3d');
+  tiltCards.forEach(card => {
     card.addEventListener('mousemove', (e) => {
       const rect = card.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      
+      const rotateX = ((y - centerY) / centerY) * -7;
+      const rotateY = ((x - centerX) / centerX) * 7;
+
+      card.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.02, 1.02, 1.02)`;
       card.style.setProperty('--mouse-x', `${x}px`);
       card.style.setProperty('--mouse-y', `${y}px`);
     }, { passive: true });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+    });
   });
 
-  // F. Staggered Scroll-Reveal Observer
+  // E. Staggered Scroll-Reveal Observer
   const revealElements = document.querySelectorAll('.reveal-on-scroll');
   if (revealElements.length > 0) {
     if (prefersReducedMotion) {
@@ -345,7 +528,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // G. Corporate FAQ Accordion
+  // F. Corporate FAQ Accordion
   const faqItems = document.querySelectorAll('.faq-item');
   faqItems.forEach(item => {
     const header = item.querySelector('.faq-header');
@@ -354,7 +537,6 @@ document.addEventListener('DOMContentLoaded', () => {
       header.addEventListener('click', () => {
         const isActive = item.classList.contains('active');
         
-        // Close other items
         faqItems.forEach(otherItem => {
           if (otherItem !== item) {
             otherItem.classList.remove('active');
@@ -363,7 +545,6 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         });
 
-        // Toggle current item
         if (isActive) {
           item.classList.remove('active');
           body.style.maxHeight = null;
@@ -374,4 +555,13 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   });
+
+  // G. Live Telemetry Simulators (Pulse updates)
+  const pingLatencyEl = document.getElementById('liveLatencyPing');
+  if (pingLatencyEl) {
+    setInterval(() => {
+      const randomPing = Math.floor(Math.random() * 5) + 11;
+      pingLatencyEl.textContent = `${randomPing}ms`;
+    }, 2800);
+  }
 });
