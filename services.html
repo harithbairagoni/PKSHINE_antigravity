@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Peacock Shine Private Limited</title>
+  <meta name="description" content="Explore Peacock Shine's full suite of enterprise services: Application Development, IT Staffing & Resource Augmentation, Project Management, Professional Services, Enterprise Solutions, and Management Consulting.">
+  <link rel="icon" type="image/svg+xml" href="images/peacock-shine-logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+  <!-- TOP BAR -->
+  <div class="top-bar py-2.5 px-4 sm:px-8 border-b border-slate-800/40">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+      <div class="flex flex-wrap items-center gap-4 text-xs font-medium">
+        <span class="flex items-center gap-1.5 text-slate-300">
+          <svg class="w-3.5 h-3.5 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          Mysore &amp; Nanjangud, Karnataka, India
+        </span>
+        <span class="hidden sm:inline text-slate-600">|</span>
+        <a href="tel:+917569592985" class="flex items-center gap-1.5 hover:text-cyan-400">
+          <svg class="w-3.5 h-3.5 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          +91 7569592985
+        </a>
+        <span class="hidden sm:inline text-slate-600">|</span>
+        <a href="mailto:info@peacockshine.com" class="flex items-center gap-1.5 hover:text-cyan-400">
+          <svg class="w-3.5 h-3.5 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          info@peacockshine.com
+        </a>
+      </div>
+      <div class="flex items-center gap-4 text-xs">
+        <span class="text-teal-400 font-semibold">Corporate Services Framework</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="navbar-wrapper sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center focus:outline-none">
+        <img src="images/peacock-shine-logo.svg" alt="Peacock Shine Private Limited" class="h-12 w-auto max-w-[280px] sm:max-w-[340px]">
+      </a>
+      <nav class="hidden lg:flex items-center space-x-1 font-medium">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="solutions.html" class="nav-link">Solutions</a>
+        <a href="services.html" class="nav-link active">Services</a>
+        <a href="industries.html" class="nav-link">Industries</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="contact.html" class="hidden sm:inline-flex btn-peacock shadow-sm">
+          <span>Consult With Us</span>
+        </a>
+        <button id="mobileMenuBtn" type="button" class="lg:hidden p-2 text-slate-700 hover:text-teal-600 focus:outline-none">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-white border-b border-slate-200 px-6 py-6 shadow-xl">
+      <div class="flex flex-col space-y-4">
+        <a href="index.html" class="text-base font-semibold text-slate-800 hover:text-teal-600 border-b border-slate-100 pb-2">Home</a>
+        <a href="about.html" class="text-base font-semibold text-slate-800 hover:text-teal-600 border-b border-slate-100 pb-2">About Us</a>
+        <a href="solutions.html" class="text-base font-semibold text-slate-800 hover:text-teal-600 border-b border-slate-100 pb-2">Solutions</a>
+        <a href="services.html" class="text-base font-semibold text-teal-700 hover:text-teal-900 border-b border-slate-100 pb-2">Services</a>
+        <a href="industries.html" class="text-base font-semibold text-slate-800 hover:text-teal-600 border-b border-slate-100 pb-2">Industries</a>
+        <a href="contact.html" class="text-base font-semibold text-slate-800 hover:text-teal-600 border-b border-slate-100 pb-2">Contact Us</a>
+        <div class="pt-2">
+          <a href="contact.html" class="btn-peacock w-full justify-center text-center">Consult With Us</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <section class="breadcrumb-container">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      <div class="flex items-center gap-2 text-xs text-slate-400 mb-2">
+        <a href="index.html" class="hover:text-cyan-400">Home</a>
+        <span>/</span>
+        <span class="text-teal-400 font-semibold">Services</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-white">Professional Consulting &amp; IT Services</h1>
+      <p class="text-slate-300 text-sm sm:text-base mt-2 max-w-2xl">
+        Industry-leading technology services delivered through disciplined project management, vetted technical staffing, and strategic advisory.
+      </p>
+    </div>
+  </section>
+
+  <!-- QUICK NAVIGATION STICKY STRIP -->
+  <div class="bg-white border-b border-slate-200 py-3 sticky top-[69px] z-40 hidden md:block shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 flex items-center justify-between text-xs font-semibold text-slate-600">
+      <span>Jump to Service:</span>
+      <div class="flex items-center gap-6">
+        <a href="#app-dev" class="hover:text-teal-600">Application Development</a>
+        <a href="#staffing" class="hover:text-teal-600">IT Staffing</a>
+        <a href="#project-mgmt" class="hover:text-teal-600">Project Management</a>
+        <a href="#tech-services" class="hover:text-teal-600">Tech Services</a>
+        <a href="#enterprise-solutions" class="hover:text-teal-600">Enterprise Solutions</a>
+        <a href="#mgmt-consulting" class="hover:text-teal-600">Management Consulting</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICES CONTENT -->
+  <div class="py-16 space-y-16 max-w-7xl mx-auto px-4 sm:px-8">
+
+    <!-- 1. Application Development Services -->
+    <section id="app-dev" class="scroll-mt-32">
+      <div class="bg-white border border-slate-200 rounded-2xl p-8 sm:p-12 shadow-sm">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div class="lg:col-span-7 space-y-4">
+            <div class="inline-flex items-center gap-2 text-teal-600 font-bold text-xs uppercase tracking-wider">
+              <span>Category 01</span>
+              <span>&bull;</span>
+              <span>Full-Lifecycle SDLC</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Application Development Services</h2>
+            <p class="text-slate-600 text-base leading-relaxed">
+              From early product discovery to high-scale production operations, Peacock Shine designs, builds, and maintains custom software applications engineered to satisfy rigorous performance criteria and business demands.
+            </p>
+            
+            <div class="space-y-3 pt-2">
+              <div class="check-item">
+                <span class="check-icon">&#10003;</span>
+                <div>
+                  <h4 class="font-bold text-sm text-slate-900">Custom Engineering &amp; Modern Frameworks</h4>
+                  <p class="text-xs text-slate-500">Full-stack engineering across cloud architectures, event-driven backends, and responsive frontends.</p>
+                </div>
+              </div>
+              <div class="check-item">
+                <span class="check-icon">&#10003;</span>
+                <div>
+                  <h4 class="font-bold text-sm text-slate-900">Automated QA, Performance &amp; Security Testing</h4>
+                  <p class="text-xs text-slate-500">Unit, integration, regression, load testing, and static analysis integrated into CI/CD pipelines.</p>
+                </div>
+              </div>
+              <div class="check-item">
+                <span class="check-icon">&#10003;</span>
+                <div>
+                  <h4 class="font-bold text-sm text-slate-900">Post-Launch Maintenance &amp; Dedicated SLAs</h4>
+                  <p class="text-xs text-slate-500">Predictable ongoing support, security patch management, performance monitoring, and tier-1 to tier-3 support.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-2">
+              <a href="contact.html?service=AppDev" class="btn-peacock text-xs">Request Application Services</a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5">
+            <div class="rounded-xl overflow-hidden shadow-lg border border-slate-200">
+              <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" alt="Application Development Services" class="w-full h-80 object-cover">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. IT Staffing & Resource Augmentation -->
+    <section id="staffing" class="scroll-mt-32">
+      <div class="bg-white border border-slate-200 rounded-2xl p-8 sm:p-12 shadow-sm">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div class="lg:col-span-5 order-2 lg:order-1">
+            <div class="rounded-xl overflow-hidden shadow-lg border border-slate-200">
+              <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80" alt="IT Staffing & Resource Augmentation" class="w-full h-80 object-cover">
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 space-y-4 order-1 lg:order-2">
+            <div class="inline-flex items-center gap-2 text-teal-600 font-bold text-xs uppercase tracking-wider">
+              <span>Category 02</span>
+              <span>&bull;</span>
+              <span>Flexible Talent Solutions</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">IT Staffing &amp; Resource Augmentation</h2>
+            <p class="text-slate-600 text-base leading-relaxed">
+              Modeled after the flexible talent delivery models of Akoya Solutions, we supply rigorously vetted engineers, architects, project managers, and ERP consultants to help client organizations overcome talent shortages and hit critical project milestones.
+            </p>
+            
+            <div class="space-y-3 pt-2">
+              <div class="check-item">
+                <span class="check-icon">&#10003;</span>
+                <div>
+                  <h4 class="font-bold text-sm text-slate-900">Staff Supplementation &amp; Specialized Roles</h4>
+                  <p class="text-xs text-slate-500">Cloud architects, full-stack engineers, SAP/Oracle functional leads, DevOps specialists, and security analysts.</p>
+                </div>
+              </div>
+              <div class="check-item">
+                <span class="check-icon">&#10003;</span>
+                <div>
+                  <h4 class="font-bold text-sm text-slate-900">Versatile Engagement Frameworks</h4>
+                  <p class="text-xs text-slate-500">Short-term contracts, contract-to-hire, long-term dedicated pods, and managed offshore development centers (ODC).</p>
+                </div>
+              </div>
+              <div class="check-item">
+                <span class="check-icon">&#10003;</span>
+                <div>
+                  <h4 class="font-bold text-sm text-slate-900">Speed-to-Deployment &amp; Quality Guarantee</h4>
+                  <p class="text-xs text-slate-500">Multi-tier technical vetting, cultural alignment checks, and prompt onboarding within 5&ndash;10 business days.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-2">
+              <a href="contact.html?service=Staffing" class="btn-peacock text-xs">Request Staffing Augmentation</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Project Management & Consulting -->
+    <section id="project-mgmt" class="scroll-mt-32">
+      <div class="bg-white border border-slate-200 rounded-2xl p-8 sm:p-12 shadow-sm">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div class="lg:col-span-7 space-y-4">
+            <div class="inline-flex items-center gap-2 text-teal-600 font-bold text-xs uppercase tracking-wider">
+              <span>Category 03</span>
+              <span>&bull;</span>
+              <span>Governance &amp; Delivery</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Project Management &amp; Consulting</h2>
+            <p class="text-slate-600 text-base leading-relaxed">
+              Complex initiatives fail without disciplined oversight. Our certified project delivery managers enforce proven governance, Agile cadences, sprint velocity tracking, budget transparency, and early risk identification.
+            </p>
+            
+            <div class="space-y-3 pt-2">
+              <div class="check-item">
+                <span class="check-icon">&#10003;</span>
+                <div>
+                  <h4 class="font-bold text-sm text-slate-900">Certified PMP, Scrum &amp; SAFe Delivery Leadership</h4>
+                  <p class="text-xs text-slate-500">Institutionalized best practices ensuring consistent delivery momentum across complex multi-vendor initiatives.</p>
+                </div>
+              </div>
+              <div class="check-item">
+                <span class="check-icon">&#10003;</span>
+                <div>
+                  <h4 class="font-bold text-sm text-slate-900">Risk Assessment &amp; Milestone Remediation</h4>
+                  <p class="text-xs text-slate-500">Proactive bottleneck mitigation, dependency mapping, and rigorous budget/time-tracking mechanisms.</p>
+                </div>
+              </div>
+              <div class="check-item">
+                <span class="check-icon">&#10003;</span>
+                <div>
+                  <h4 class="font-bold text-sm text-slate-900">Executive Stakeholder Reporting &amp; PMO Setup</h4>
+                  <p class="text-xs text-slate-500">Establishing internal Project Management Offices (PMO) with clear dashboarding for executive visibility.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-2">
+              <a href="contact.html?service=ProjectManagement" class="btn-peacock text-xs">Consult With PMO Specialists</a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5">
+            <div class="rounded-xl overflow-hidden shadow-lg border border-slate-200">
+              <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=800&q=80" alt="Project Management & Consulting" class="w-full h-80 object-cover">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Professional Technology Services -->
+    <section id="tech-services" class="scroll-mt-32">
+      <div class="bg-white border border-slate-200 rounded-2xl p-8 sm:p-12 shadow-sm">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div class="lg:col-span-5 order-2 lg:order-1">
+            <div class="rounded-xl overflow-hidden shadow-lg border border-slate-200">
+              <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80" alt="Professional Technology Services" class="w-full h-80 object-cover">
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 space-y-4 order-1 lg:order-2">
+            <div class="inline-flex items-center gap-2 text-teal-600 font-bold text-xs uppercase tracking-wider">
+              <span>Category 04</span>
+              <span>&bull;</span>
+              <span>Systems &amp; Infrastructure</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Professional Technology Services</h2>
+            <p class="text-slate-600 text-base leading-relaxed">
+              We bridge disparate enterprise systems, configure cloud foundations, enforce disaster recovery failover architectures, and provide high-caliber advisory to build infrastructure resilience.
+            </p>
+            
+            <div class="space-y-3 pt-2">
+              <div class="check-item">
+                <span class="check-icon">&#10003;</span>
+                <div>
+                  <h4 class="font-bold text-sm text-slate-900">Enterprise Systems Integration (ESI)</h4>
+                  <p class="text-xs text-slate-500">Harmonizing heterogeneous software stacks via ESBs, message queues (Kafka, RabbitMQ), and custom connectors.</p>
+                </div>
+              </div>
+              <div class="check-item">
+                <span class="check-icon">&#10003;</span>
+                <div>
+                  <h4 class="font-bold text-sm text-slate-900">Cloud Infrastructure Orchestration</h4>
+                  <p class="text-xs text-slate-500">Infrastructure-as-Code (Terraform, Ansible), containerization (Docker, Kubernetes), and multi-region resilience.</p>
+                </div>
+              </div>
+              <div class="check-item">
+                <span class="check-icon">&#10003;</span>
+                <div>
+                  <h4 class="font-bold text-sm text-slate-900">Disaster Recovery &amp; Business Continuity Planning</h4>
+                  <p class="text-xs text-slate-500">Automated backup snapshots, RPO/RTO optimization, and zero-data-loss failover procedures.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-2">
+              <a href="contact.html?service=TechServices" class="btn-peacock text-xs">Request Technology Services</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Enterprise Solutions -->
+    <section id="enterprise-solutions" class="scroll-mt-32">
+      <div class="bg-white border border-slate-200 rounded-2xl p-8 sm:p-12 shadow-sm">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div class="lg:col-span-7 space-y-4">
+            <div class="inline-flex items-center gap-2 text-teal-600 font-bold text-xs uppercase tracking-wider">
+              <span>Category 05</span>
+              <span>&bull;</span>
+              <span>Core Enterprise Systems</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Enterprise Solutions</h2>
+            <p class="text-slate-600 text-base leading-relaxed">
+              Providing modern enterprises with foundational systems that unify operations, optimize resource allocation, synthesize business intelligence, and manage supply chain workflows across multiple geographies.
+            </p>
+            
+            <div class="space-y-3 pt-2">
+              <div class="check-item">
+                <span class="check-icon">&#10003;</span>
+                <div>
+                  <h4 class="font-bold text-sm text-slate-900">CRM &amp; Customer Experience Platforms</h4>
+                  <p class="text-xs text-slate-500">Salesforce, Microsoft Dynamics CRM, and custom omnichannel customer management platforms.</p>
+                </div>
+              </div>
+              <div class="check-item">
+                <span class="check-icon">&#10003;</span>
+                <div>
+                  <h4 class="font-bold text-sm text-slate-900">Supply Chain &amp; Logistics Management (SCM)</h4>
+                  <p class="text-xs text-slate-500">Real-time inventory tracking, warehouse logistics optimization, and supplier portal integrations.</p>
+                </div>
+              </div>
+              <div class="check-item">
+                <span class="check-icon">&#10003;</span>
+                <div>
+                  <h4 class="font-bold text-sm text-slate-900">Data Warehousing &amp; Business Intelligence</h4>
+                  <p class="text-xs text-slate-500">Centralized data lakes (Snowflake, BigQuery), ETL pipelines, and executive PowerBI / Tableau scorecards.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-2">
+              <a href="contact.html?service=EnterpriseSolutions" class="btn-peacock text-xs">Explore Enterprise Solutions</a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5">
+            <div class="rounded-xl overflow-hidden shadow-lg border border-slate-200">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Enterprise Solutions" class="w-full h-80 object-cover">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Business & Management Consulting -->
+    <section id="mgmt-consulting" class="scroll-mt-32">
+      <div class="bg-white border border-slate-200 rounded-2xl p-8 sm:p-12 shadow-sm">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div class="lg:col-span-5 order-2 lg:order-1">
+            <div class="rounded-xl overflow-hidden shadow-lg border border-slate-200">
+              <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80" alt="Business and Management Consulting" class="w-full h-80 object-cover">
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 space-y-4 order-1 lg:order-2">
+            <div class="inline-flex items-center gap-2 text-teal-600 font-bold text-xs uppercase tracking-wider">
+              <span>Category 06</span>
+              <span>&bull;</span>
+              <span>Strategic Advisory</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Business &amp; Management Consulting</h2>
+            <p class="text-slate-600 text-base leading-relaxed">
+              We guide executive boards and operating committees through organizational redesign, change management, cost optimization, and post-merger technology unification.
+            </p>
+            
+            <div class="space-y-3 pt-2">
+              <div class="check-item">
+                <span class="check-icon">&#10003;</span>
+                <div>
+                  <h4 class="font-bold text-sm text-slate-900">Strategic Business Transformation</h4>
+                  <p class="text-xs text-slate-500">Aligning technology investments directly with top-line revenue growth and operational scalability.</p>
+                </div>
+              </div>
+              <div class="check-item">
+                <span class="check-icon">&#10003;</span>
+                <div>
+                  <h4 class="font-bold text-sm text-slate-900">Organizational Change Management (OCM)</h4>
+                  <p class="text-xs text-slate-500">Employee transition strategies, digital culture enablement, and comprehensive user adoption programs.</p>
+                </div>
+              </div>
+              <div class="check-item">
+                <span class="check-icon">&#10003;</span>
+                <div>
+                  <h4 class="font-bold text-sm text-slate-900">Cost Rationalization &amp; Operational Audits</h4>
+                  <p class="text-xs text-slate-500">Systematic analysis of software license overhead, vendor agreements, and operational friction points.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-2">
+              <a href="contact.html?service=ManagementConsulting" class="btn-peacock text-xs">Book Management Advisory Session</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="corporate-footer pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
+        <div class="lg:col-span-2 space-y-4">
+          <img src="images/peacock-shine-logo-white.svg" alt="Peacock Shine Private Limited" class="h-11 w-auto max-w-[280px]">
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed pr-6">
+            Peacock Shine Private Limited delivers innovative, reliable and cost-effective consulting and technology solutions across enterprise domains.
+          </p>
+        </div>
+        <div>
+          <h5>Solutions</h5>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="solutions.html#mobile-app">Mobile App Development</a></li>
+            <li><a href="solutions.html#web-app">Web App Development</a></li>
+            <li><a href="solutions.html#erp-solutions">ERP Solutions &amp; Support</a></li>
+            <li><a href="solutions.html#digital-transformation">Digital Transformation</a></li>
+            <li><a href="solutions.html#tech-consulting">Technology Consulting</a></li>
+            <li><a href="solutions.html#business-process">Business Process Solutions</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Services</h5>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="services.html#app-dev">Application Development</a></li>
+            <li><a href="services.html#staffing">IT Staffing &amp; Augmentation</a></li>
+            <li><a href="services.html#project-mgmt">Project Management</a></li>
+            <li><a href="services.html#tech-services">Professional Tech Services</a></li>
+            <li><a href="services.html#enterprise-solutions">Enterprise Solutions</a></li>
+            <li><a href="services.html#mgmt-consulting">Management Consulting</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Corporate Office</h5>
+          <address class="not-italic text-xs text-slate-400 space-y-2.5 leading-relaxed">
+            <p class="font-bold text-slate-200">PEACOCK SHINE PRIVATE LIMITED</p>
+            <p>
+              No. 1889/1, First Floor, Chamalapura Street,<br>
+              8th Ward, Nanjangud Town (Rural),<br>
+              Mysore, Karnataka, India &ndash; 571301.
+            </p>
+            <p class="pt-1">
+              <strong class="text-slate-200">Email:</strong><br>
+              <a href="mailto:info@peacockshine.com" class="text-cyan-400 hover:underline">info@peacockshine.com</a>
+            </p>
+            <p>
+              <strong class="text-slate-200">Phone:</strong><br>
+              <a href="tel:+917569592985" class="text-cyan-400 hover:underline">+91 7569592985</a>
+            </p>
+          </address>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
+        <p>&copy; <span class="current-year">2026</span> Peacock Shine Private Limited. All Rights Reserved.</p>
+        <div class="flex items-center space-x-6">
+          <a href="about.html" class="hover:text-slate-300">About Us</a>
+          <a href="industries.html" class="hover:text-slate-300">Industries</a>
+          <a href="contact.html" class="hover:text-slate-300">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="toastNotification">
+    <svg class="w-5 h-5 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+    <span id="toastMessage" class="text-sm font-medium">Notification message</span>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Industry Expertise | Peacock Shine Private Limited</title>
+  <meta name="description" content="Peacock Shine's cross-sector industry expertise: BFSI, Communications & Payment Services, Pharma & Healthcare, Information Technology, Infrastructure & Engineering, and Manufacturing.">
+  <link rel="icon" type="image/svg+xml" href="images/peacock-shine-logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+  <!-- TOP BAR -->
+  <div class="top-bar py-2.5 px-4 sm:px-8 border-b border-slate-800/40">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+      <div class="flex flex-wrap items-center gap-4 text-xs font-medium">
+        <span class="flex items-center gap-1.5 text-slate-300">
+          <svg class="w-3.5 h-3.5 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          Mysore &amp; Nanjangud, Karnataka, India
+        </span>
+        <span class="hidden sm:inline text-slate-600">|</span>
+        <a href="tel:+917569592985" class="flex items-center gap-1.5 hover:text-cyan-400">
+          <svg class="w-3.5 h-3.5 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          +91 7569592985
+        </a>
+        <span class="hidden sm:inline text-slate-600">|</span>
+        <a href="mailto:info@peacockshine.com" class="flex items-center gap-1.5 hover:text-cyan-400">
+          <svg class="w-3.5 h-3.5 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          info@peacockshine.com
+        </a>
+      </div>
+      <div class="flex items-center gap-4 text-xs">
+        <span class="text-teal-400 font-semibold">Specialized Industry Domains</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="navbar-wrapper sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center focus:outline-none">
+        <img src="images/peacock-shine-logo.svg" alt="Peacock Shine Private Limited" class="h-12 w-auto max-w-[280px] sm:max-w-[340px]">
+      </a>
+      <nav class="hidden lg:flex items-center space-x-1 font-medium">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="solutions.html" class="nav-link">Solutions</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="industries.html" class="nav-link active">Industries</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="contact.html" class="hidden sm:inline-flex btn-peacock shadow-sm">
+          <span>Consult With Us</span>
+        </a>
+        <button id="mobileMenuBtn" type="button" class="lg:hidden p-2 text-slate-700 hover:text-teal-600 focus:outline-none">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-white border-b border-slate-200 px-6 py-6 shadow-xl">
+      <div class="flex flex-col space-y-4">
+        <a href="index.html" class="text-base font-semibold text-slate-800 hover:text-teal-600 border-b border-slate-100 pb-2">Home</a>
+        <a href="about.html" class="text-base font-semibold text-slate-800 hover:text-teal-600 border-b border-slate-100 pb-2">About Us</a>
+        <a href="solutions.html" class="text-base font-semibold text-slate-800 hover:text-teal-600 border-b border-slate-100 pb-2">Solutions</a>
+        <a href="services.html" class="text-base font-semibold text-slate-800 hover:text-teal-600 border-b border-slate-100 pb-2">Services</a>
+        <a href="industries.html" class="text-base font-semibold text-teal-700 hover:text-teal-900 border-b border-slate-100 pb-2">Industries</a>
+        <a href="contact.html" class="text-base font-semibold text-slate-800 hover:text-teal-600 border-b border-slate-100 pb-2">Contact Us</a>
+        <div class="pt-2">
+          <a href="contact.html" class="btn-peacock w-full justify-center text-center">Consult With Us</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <section class="breadcrumb-container">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      <div class="flex items-center gap-2 text-xs text-slate-400 mb-2">
+        <a href="index.html" class="hover:text-cyan-400">Home</a>
+        <span>/</span>
+        <span class="text-teal-400 font-semibold">Industries</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-white">Industry Domain Expertise</h1>
+      <p class="text-slate-300 text-sm sm:text-base mt-2 max-w-2xl">
+        Bridging technological precision with in-depth vertical experience to solve domain-specific enterprise challenges.
+      </p>
+    </div>
+  </section>
+
+  <!-- QUICK NAVIGATION STICKY STRIP -->
+  <div class="bg-white border-b border-slate-200 py-3 sticky top-[69px] z-40 hidden md:block shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 flex items-center justify-between text-xs font-semibold text-slate-600">
+      <span>Jump to Industry:</span>
+      <div class="flex items-center gap-6">
+        <a href="#bfsi" class="hover:text-teal-600">BFSI</a>
+        <a href="#payments" class="hover:text-teal-600">Communications &amp; Payments</a>
+        <a href="#pharma" class="hover:text-teal-600">Pharma &amp; Healthcare</a>
+        <a href="#it" class="hover:text-teal-600">Information Technology</a>
+        <a href="#infrastructure" class="hover:text-teal-600">Infrastructure &amp; Engineering</a>
+        <a href="#manufacturing" class="hover:text-teal-600">Manufacturing</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- INDUSTRIES CONTENT -->
+  <div class="py-16 space-y-16 max-w-7xl mx-auto px-4 sm:px-8">
+
+    <!-- 1. BFSI -->
+    <section id="bfsi" class="scroll-mt-32">
+      <div class="bg-white border border-slate-200 rounded-2xl p-8 sm:p-12 shadow-sm">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div class="lg:col-span-7 space-y-4">
+            <span class="badge-tag">Industry Sector 01</span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Banking, Financial Services &amp; Insurance (BFSI)</h2>
+            <p class="text-slate-600 text-base leading-relaxed">
+              Financial institutions operate under intense scrutiny, razor-thin transaction latency thresholds, and constantly evolving regulatory mandates. Peacock Shine delivers secure fintech architecture, risk modeling engines, and customer portal solutions.
+            </p>
+            
+            <div class="space-y-2 text-xs text-slate-600 pt-2">
+              <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-teal-500"></span><strong>Core Banking Modernization:</strong> API-first middleware connecting legacy mainframes to cloud channels.</div>
+              <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-teal-500"></span><strong>Fraud Mitigation &amp; Risk Scoring:</strong> Automated rule engines and anomaly detection algorithms.</div>
+              <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-teal-500"></span><strong>Regulatory Compliance:</strong> KYC/AML workflow automation, Basel III, and SOX reporting pipelines.</div>
+            </div>
+
+            <div class="pt-3">
+              <a href="contact.html?industry=BFSI" class="btn-peacock text-xs">Consult On BFSI Solutions</a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5">
+            <div class="rounded-xl overflow-hidden shadow-lg border border-slate-200">
+              <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=800&q=80" alt="Banking and Financial Services" class="w-full h-72 object-cover">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Communications & Payment Services -->
+    <section id="payments" class="scroll-mt-32">
+      <div class="bg-white border border-slate-200 rounded-2xl p-8 sm:p-12 shadow-sm">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div class="lg:col-span-5 order-2 lg:order-1">
+            <div class="rounded-xl overflow-hidden shadow-lg border border-slate-200">
+              <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&q=80" alt="Communications & Payment Services" class="w-full h-72 object-cover">
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 space-y-4 order-1 lg:order-2">
+            <span class="badge-tag">Industry Sector 02</span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Communications &amp; Payment Services</h2>
+            <p class="text-slate-600 text-base leading-relaxed">
+              In line with the domain core of Akoya Solutions, we engineer scalable settlement backends, telecom billing switches, and omni-channel payment gateway integrations that handle massive concurrency with zero transaction drops.
+            </p>
+            
+            <div class="space-y-2 text-xs text-slate-600 pt-2">
+              <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-teal-500"></span><strong>Real-Time Payment Switches:</strong> High-throughput ISO 8583 and ISO 20022 message routing and clearing.</div>
+              <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-teal-500"></span><strong>Merchant Acquiring &amp; Settlement:</strong> Automated reconciliation, chargeback dispute workflows, and gateway APIs.</div>
+              <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-teal-500"></span><strong>Telecom Billing &amp; Mediation:</strong> CDR mediation, rating engines, customer lifecycle, and OSS/BSS integration.</div>
+            </div>
+
+            <div class="pt-3">
+              <a href="contact.html?industry=Payments" class="btn-peacock text-xs">Discuss Payment Services Architecture</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Pharma, Life Sciences & Healthcare -->
+    <section id="pharma" class="scroll-mt-32">
+      <div class="bg-white border border-slate-200 rounded-2xl p-8 sm:p-12 shadow-sm">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div class="lg:col-span-7 space-y-4">
+            <span class="badge-tag">Industry Sector 03</span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Pharma, Life Sciences &amp; Healthcare</h2>
+            <p class="text-slate-600 text-base leading-relaxed">
+              We empower healthcare providers, pharmaceutical manufacturers, and research bodies with compliant software platforms. Our architectures adhere strictly to HIPAA, GxP, and 21 CFR Part 11 validation standards.
+            </p>
+            
+            <div class="space-y-2 text-xs text-slate-600 pt-2">
+              <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-teal-500"></span><strong>Healthcare Portals &amp; Telehealth:</strong> Secure patient records (EHR/EMR) with end-to-end encryption.</div>
+              <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-teal-500"></span><strong>Pharma Track &amp; Trace:</strong> Serialized inventory systems combating counterfeit medication distribution.</div>
+              <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-teal-500"></span><strong>Laboratory Information Systems (LIMS):</strong> Instrument interfacing and audit-trail compliant data capture.</div>
+            </div>
+
+            <div class="pt-3">
+              <a href="contact.html?industry=Healthcare" class="btn-peacock text-xs">Inquire About Healthcare IT</a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5">
+            <div class="rounded-xl overflow-hidden shadow-lg border border-slate-200">
+              <img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=800&q=80" alt="Pharma & Healthcare" class="w-full h-72 object-cover">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Information Technology -->
+    <section id="it" class="scroll-mt-32">
+      <div class="bg-white border border-slate-200 rounded-2xl p-8 sm:p-12 shadow-sm">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div class="lg:col-span-5 order-2 lg:order-1">
+            <div class="rounded-xl overflow-hidden shadow-lg border border-slate-200">
+              <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80" alt="Information Technology" class="w-full h-72 object-cover">
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 space-y-4 order-1 lg:order-2">
+            <span class="badge-tag">Industry Sector 04</span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Information Technology &amp; Software Products</h2>
+            <p class="text-slate-600 text-base leading-relaxed">
+              We collaborate with SaaS innovators, tech conglomerates, and platform builders to design scalable multi-tenant clouds, automate release velocity, and build resilient microservice backends.
+            </p>
+            
+            <div class="space-y-2 text-xs text-slate-600 pt-2">
+              <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-teal-500"></span><strong>SaaS Multi-Tenant Platforms:</strong> Dynamic tenant provisioning, isolated data tiers, and usage metering.</div>
+              <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-teal-500"></span><strong>DevOps &amp; Cloud Reliability:</strong> SRE best practices, observability stacks (Prometheus/Grafana), and FinOps cost audits.</div>
+              <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-teal-500"></span><strong>API Platforms &amp; Developer Portals:</strong> Secure gateway monetization and comprehensive developer SDKs.</div>
+            </div>
+
+            <div class="pt-3">
+              <a href="contact.html?industry=IT" class="btn-peacock text-xs">Consult On IT Infrastructure</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Infrastructure & Engineering -->
+    <section id="infrastructure" class="scroll-mt-32">
+      <div class="bg-white border-2 border-amber-500/40 rounded-2xl p-8 sm:p-12 shadow-md relative overflow-hidden">
+        <div class="absolute top-0 right-0 bg-amber-500 text-slate-950 font-bold text-xs px-4 py-1 rounded-bl-lg uppercase tracking-wider">
+          Strategic Expansion Vertical
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div class="lg:col-span-7 space-y-4">
+            <div class="inline-flex items-center gap-2 text-amber-600 font-bold text-xs uppercase tracking-wider">
+              <span>Industry Sector 05</span>
+              <span>&bull;</span>
+              <span>High Growth Vertical</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Infrastructure &amp; Engineering</h2>
+            <p class="text-slate-600 text-base leading-relaxed">
+              Capital infrastructure, industrial construction, and civil engineering projects require specialized digital tracking, smart telemetry, and project execution software. Peacock Shine is actively expanding its technological capabilities to serve major infrastructure initiatives.
+            </p>
+            
+            <div class="space-y-2 text-xs text-slate-600 pt-2">
+              <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-amber-500"></span><strong>Smart Civil &amp; Utility Asset Monitoring:</strong> IoT sensor network integration for bridges, highways, water, and power grids.</div>
+              <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-amber-500"></span><strong>Engineering Project Execution Systems (EPMS):</strong> Real-time material logistics, subcontractor billing, and BIM model viewers.</div>
+              <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-amber-500"></span><strong>Industrial Telemetry &amp; Field Worker Safety:</strong> Wearable device tracking, geo-fencing, and automated compliance logging.</div>
+            </div>
+
+            <div class="pt-3">
+              <a href="contact.html?industry=Infrastructure" class="btn-peacock text-xs bg-amber-600 hover:bg-amber-700">Explore Infrastructure Tech Partnerships</a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5">
+            <div class="rounded-xl overflow-hidden shadow-lg border border-slate-200">
+              <img src="https://images.unsplash.com/photo-1541888946425-d0fbb1861593?auto=format&fit=crop&w=800&q=80" alt="Infrastructure and Engineering" class="w-full h-72 object-cover">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Manufacturing & Industrial Services -->
+    <section id="manufacturing" class="scroll-mt-32">
+      <div class="bg-white border border-slate-200 rounded-2xl p-8 sm:p-12 shadow-sm">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div class="lg:col-span-5 order-2 lg:order-1">
+            <div class="rounded-xl overflow-hidden shadow-lg border border-slate-200">
+              <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80" alt="Manufacturing & Industrial Services" class="w-full h-72 object-cover">
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 space-y-4 order-1 lg:order-2">
+            <span class="badge-tag">Industry Sector 06</span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Manufacturing &amp; Industrial Services</h2>
+            <p class="text-slate-600 text-base leading-relaxed">
+              We accelerate Industry 4.0 adoption for manufacturing plants, automotive supply chains, and industrial processors through smart factory connectivity, predictive equipment analytics, and automated shop-floor scheduling.
+            </p>
+            
+            <div class="space-y-2 text-xs text-slate-600 pt-2">
+              <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-teal-500"></span><strong>Manufacturing Execution Systems (MES):</strong> Shop-floor machine telemetry and Overall Equipment Effectiveness (OEE) dashboards.</div>
+              <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-teal-500"></span><strong>Predictive Maintenance:</strong> Sensor vibration and heat analysis to preempt costly assembly line downtime.</div>
+              <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-teal-500"></span><strong>ERP &amp; Shop Floor Integration:</strong> Seamless synchronization between inventory management and production output.</div>
+            </div>
+
+            <div class="pt-3">
+              <a href="contact.html?industry=Manufacturing" class="btn-peacock text-xs">Request Industrial Automation Review</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="corporate-footer pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
+        <div class="lg:col-span-2 space-y-4">
+          <img src="images/peacock-shine-logo-white.svg" alt="Peacock Shine Private Limited" class="h-11 w-auto max-w-[280px]">
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed pr-6">
+            Peacock Shine Private Limited delivers innovative, reliable and cost-effective consulting and technology solutions across enterprise domains.
+          </p>
+        </div>
+        <div>
+          <h5>Solutions</h5>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="solutions.html#mobile-app">Mobile App Development</a></li>
+            <li><a href="solutions.html#web-app">Web App Development</a></li>
+            <li><a href="solutions.html#erp-solutions">ERP Solutions &amp; Support</a></li>
+            <li><a href="solutions.html#digital-transformation">Digital Transformation</a></li>
+            <li><a href="solutions.html#tech-consulting">Technology Consulting</a></li>
+            <li><a href="solutions.html#business-process">Business Process Solutions</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Services</h5>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="services.html#app-dev">Application Development</a></li>
+            <li><a href="services.html#staffing">IT Staffing &amp; Augmentation</a></li>
+            <li><a href="services.html#project-mgmt">Project Management</a></li>
+            <li><a href="services.html#tech-services">Professional Tech Services</a></li>
+            <li><a href="services.html#enterprise-solutions">Enterprise Solutions</a></li>
+            <li><a href="services.html#mgmt-consulting">Management Consulting</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Corporate Office</h5>
+          <address class="not-italic text-xs text-slate-400 space-y-2.5 leading-relaxed">
+            <p class="font-bold text-slate-200">PEACOCK SHINE PRIVATE LIMITED</p>
+            <p>
+              No. 1889/1, First Floor, Chamalapura Street,<br>
+              8th Ward, Nanjangud Town (Rural),<br>
+              Mysore, Karnataka, India &ndash; 571301.
+            </p>
+            <p class="pt-1">
+              <strong class="text-slate-200">Email:</strong><br>
+              <a href="mailto:info@peacockshine.com" class="text-cyan-400 hover:underline">info@peacockshine.com</a>
+            </p>
+            <p>
+              <strong class="text-slate-200">Phone:</strong><br>
+              <a href="tel:+917569592985" class="text-cyan-400 hover:underline">+91 7569592985</a>
+            </p>
+          </address>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
+        <p>&copy; <span class="current-year">2026</span> Peacock Shine Private Limited. All Rights Reserved.</p>
+        <div class="flex items-center space-x-6">
+          <a href="about.html" class="hover:text-slate-300">About Us</a>
+          <a href="industries.html" class="hover:text-slate-300">Industries</a>
+          <a href="contact.html" class="hover:text-slate-300">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="toastNotification">
+    <svg class="w-5 h-5 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+    <span id="toastMessage" class="text-sm font-medium">Notification message</span>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

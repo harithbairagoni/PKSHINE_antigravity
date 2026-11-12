@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 70" width="100%" height="100%">
+  <defs>
+    <linearGradient id="peacockTealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7" />
+      <stop offset="60%" stop-color="#0D9488" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <linearGradient id="peacockGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+    <linearGradient id="peacockBlueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0369A1" />
+      <stop offset="100%" stop-color="#0A192F" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Brand Mark Icon: Stylized Royal Peacock Feather / Modern Geometric Crown -->
+  <g transform="translate(6, 4) scale(0.85)">
+    <!-- Base Shield / Foundation -->
+    <path d="M35 5 L62 20 L62 52 L35 68 L8 52 L8 20 Z" fill="none" stroke="#E2E8F0" stroke-width="1.5" opacity="0.7"/>
+    
+    <!-- Feather Plume Left -->
+    <path d="M35 62 C22 45 12 32 18 16 C22 8 32 12 35 24 C38 12 48 8 52 16 C58 32 48 45 35 62 Z" fill="url(#peacockTealGrad)"/>
+    
+    <!-- Inner Core & Eye -->
+    <path d="M35 50 C28 38 24 28 28 20 C31 15 35 18 35 25 C35 18 39 15 42 20 C46 28 42 38 35 50 Z" fill="url(#peacockBlueGrad)"/>
+    
+    <!-- Jewel Center Eye (Golden Sunburst of "Shine") -->
+    <circle cx="35" cy="28" r="5.5" fill="url(#peacockGoldGrad)" filter="url(#glow)"/>
+    <circle cx="35" cy="28" r="2" fill="#FFFFFF"/>
+    
+    <!-- Dynamic Shine Accent Sparks -->
+    <path d="M35 2 L37 8 L35 14 L33 8 Z" fill="#F59E0B"/>
+    <path d="M60 16 L54 18 L58 22 Z" fill="#0284C7"/>
+    <path d="M10 16 L16 18 L12 22 Z" fill="#0D9488"/>
+  </g>
+
+  <!-- Typography Hierarchy (Clean, Zero Overlap Lockup) -->
+  <!-- Line 1: Primary Corporate Name -->
+  <text x="74" y="34" font-family="'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif" font-size="23" font-weight="800" letter-spacing="0.03em" fill="#0A192F">
+    PEACOCK <tspan fill="#0D9488">SHINE</tspan>
+  </text>
+  
+  <!-- Line 2: Entity & Domain Classification -->
+  <text x="75" y="52" font-family="'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif" font-size="9" font-weight="700" letter-spacing="0.16em" fill="#64748B">
+    PRIVATE LIMITED <tspan fill="#CBD5E1" font-weight="400">|</tspan> <tspan fill="#0284C7" font-weight="600" letter-spacing="0.08em">CONSULTING &amp; TECHNOLOGY</tspan>
+  </text>
+</svg>

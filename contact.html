@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Peacock Shine Private Limited</title>
+  <meta name="description" content="Get in touch with Peacock Shine Private Limited. Corporate office in Mysore & Nanjangud, Karnataka, India. Email: info@peacockshine.com | Phone: +91 7569592985.">
+  <link rel="icon" type="image/svg+xml" href="images/peacock-shine-logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+  <!-- TOP BAR -->
+  <div class="top-bar py-2.5 px-4 sm:px-8 border-b border-slate-800/40">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+      <div class="flex flex-wrap items-center gap-4 text-xs font-medium">
+        <span class="flex items-center gap-1.5 text-slate-300">
+          <svg class="w-3.5 h-3.5 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          Mysore &amp; Nanjangud, Karnataka, India
+        </span>
+        <span class="hidden sm:inline text-slate-600">|</span>
+        <a href="tel:+917569592985" class="flex items-center gap-1.5 hover:text-cyan-400">
+          <svg class="w-3.5 h-3.5 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          +91 7569592985
+        </a>
+        <span class="hidden sm:inline text-slate-600">|</span>
+        <a href="mailto:info@peacockshine.com" class="flex items-center gap-1.5 hover:text-cyan-400">
+          <svg class="w-3.5 h-3.5 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          info@peacockshine.com
+        </a>
+      </div>
+      <div class="flex items-center gap-4 text-xs">
+        <span class="text-teal-400 font-semibold">Inquiry Response SLA: &lt; 24 Business Hours</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="navbar-wrapper sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center focus:outline-none">
+        <img src="images/peacock-shine-logo.svg" alt="Peacock Shine Private Limited" class="h-12 w-auto max-w-[280px] sm:max-w-[340px]">
+      </a>
+      <nav class="hidden lg:flex items-center space-x-1 font-medium">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="solutions.html" class="nav-link">Solutions</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="industries.html" class="nav-link">Industries</a>
+        <a href="contact.html" class="nav-link active">Contact Us</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="contact.html" class="hidden sm:inline-flex btn-peacock shadow-sm">
+          <span>Inquire Directly</span>
+        </a>
+        <button id="mobileMenuBtn" type="button" class="lg:hidden p-2 text-slate-700 hover:text-teal-600 focus:outline-none">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-white border-b border-slate-200 px-6 py-6 shadow-xl">
+      <div class="flex flex-col space-y-4">
+        <a href="index.html" class="text-base font-semibold text-slate-800 hover:text-teal-600 border-b border-slate-100 pb-2">Home</a>
+        <a href="about.html" class="text-base font-semibold text-slate-800 hover:text-teal-600 border-b border-slate-100 pb-2">About Us</a>
+        <a href="solutions.html" class="text-base font-semibold text-slate-800 hover:text-teal-600 border-b border-slate-100 pb-2">Solutions</a>
+        <a href="services.html" class="text-base font-semibold text-slate-800 hover:text-teal-600 border-b border-slate-100 pb-2">Services</a>
+        <a href="industries.html" class="text-base font-semibold text-slate-800 hover:text-teal-600 border-b border-slate-100 pb-2">Industries</a>
+        <a href="contact.html" class="text-base font-semibold text-teal-700 hover:text-teal-900 border-b border-slate-100 pb-2">Contact Us</a>
+        <div class="pt-2">
+          <a href="contact.html" class="btn-peacock w-full justify-center text-center">Consult With Us</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <section class="breadcrumb-container">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      <div class="flex items-center gap-2 text-xs text-slate-400 mb-2">
+        <a href="index.html" class="hover:text-cyan-400">Home</a>
+        <span>/</span>
+        <span class="text-teal-400 font-semibold">Contact Us</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-white">Contact Peacock Shine</h1>
+      <p class="text-slate-300 text-sm sm:text-base mt-2 max-w-2xl">
+        Connect with our corporate office for consulting proposals, RFP bids, technology partnerships, or resource augmentation requests.
+      </p>
+    </div>
+  </section>
+
+  <!-- MAIN CONTACT CONTENT -->
+  <div class="py-16 max-w-7xl mx-auto px-4 sm:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+      
+      <!-- LEFT COLUMN: CORPORATE CONTACT INFORMATION -->
+      <div class="lg:col-span-5 space-y-8">
+        <div>
+          <span class="section-subtitle">Official Headquarters</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-4">Corporate Office</h2>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Our corporate headquarters is located in Karnataka's strategic Mysore &ndash; Nanjangud corridor, serving regional, national, and international clients.
+          </p>
+        </div>
+
+        <!-- Corporate Address Card -->
+        <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm space-y-4">
+          <div class="flex items-start gap-4">
+            <div class="icon-badge shrink-0">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+            </div>
+            <div>
+              <h4 class="font-bold text-slate-900 text-sm uppercase tracking-wide">Company Entity</h4>
+              <p class="text-sm font-semibold text-slate-800 mt-1">PEACOCK SHINE PRIVATE LIMITED</p>
+              <p class="text-xs text-slate-500 mt-1 leading-relaxed">
+                No. 1889/1, First Floor, Chamalapura Street,<br>
+                8th Ward, Nanjangud Town (Rural),<br>
+                Mysore, Karnataka, India &ndash; 571301.
+              </p>
+            </div>
+          </div>
+
+          <div class="border-t border-slate-100 pt-4 flex items-start gap-4">
+            <div class="icon-badge shrink-0">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </div>
+            <div>
+              <h4 class="font-bold text-slate-900 text-sm uppercase tracking-wide">Official Email</h4>
+              <p class="text-sm mt-1">
+                <a href="mailto:info@peacockshine.com" class="text-teal-700 font-semibold hover:underline">info@peacockshine.com</a>
+              </p>
+              <p class="text-xs text-slate-500 mt-0.5">Primary intake for business, proposals &amp; RFPs.</p>
+            </div>
+          </div>
+
+          <div class="border-t border-slate-100 pt-4 flex items-start gap-4">
+            <div class="icon-badge shrink-0">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            </div>
+            <div>
+              <h4 class="font-bold text-slate-900 text-sm uppercase tracking-wide">Direct Telephone</h4>
+              <p class="text-sm mt-1">
+                <a href="tel:+917569592985" class="text-teal-700 font-semibold hover:underline">+91 7569592985</a>
+              </p>
+              <p class="text-xs text-slate-500 mt-0.5">Monday &ndash; Saturday, 9:00 AM &ndash; 6:30 PM IST</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Corporate Trust & Security Card -->
+        <div class="p-6 bg-slate-900 text-white rounded-xl border border-slate-800 space-y-3">
+          <div class="flex items-center gap-2 text-teal-400 font-bold text-xs uppercase tracking-wider">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            Enterprise Security &amp; Compliance
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            All data exchanges and client interactions with Peacock Shine are protected via end-to-end 256-bit SSL encryption. We enforce strict Non-Disclosure Agreements (NDAs) prior to architectural audits.
+          </p>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: INTERACTIVE CORPORATE CONTACT FORM -->
+      <div class="lg:col-span-7">
+        <div class="bg-white border border-slate-200 rounded-2xl p-8 sm:p-10 shadow-sm">
+          <div class="mb-6">
+            <span class="badge-tag">Direct Inquiries</span>
+            <h3 class="text-2xl font-bold text-slate-900 mt-2">Request a Consultation or Proposal</h3>
+            <p class="text-slate-600 text-sm mt-1">
+              Please share your business requirements below. Submissions are delivered directly to <span class="text-teal-700 font-semibold">info@peacockshine.com</span>.
+            </p>
+          </div>
+
+          <form id="peacockContactForm" class="space-y-5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label for="contactName" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                  Full Name <span class="text-red-500">*</span>
+                </label>
+                <input type="text" id="contactName" name="name" required class="form-control" placeholder="e.g. Ramesh Kumar">
+              </div>
+
+              <div>
+                <label for="contactEmail" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                  Corporate Email <span class="text-red-500">*</span>
+                </label>
+                <input type="email" id="contactEmail" name="email" required class="form-control" placeholder="e.g. ramesh@company.com">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label for="contactPhone" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                  Phone Number
+                </label>
+                <input type="tel" id="contactPhone" name="phone" class="form-control" placeholder="e.g. +91 98765 43210">
+              </div>
+
+              <div>
+                <label for="contactCompany" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                  Organization / Company
+                </label>
+                <input type="text" id="contactCompany" name="company" class="form-control" placeholder="e.g. Global Tech Solutions">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label for="contactService" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                  Area of Interest
+                </label>
+                <select id="contactService" name="service" class="form-control">
+                  <option value="General Inquiry">Select an option...</option>
+                  <option value="Mobile App Development">Mobile Application Development</option>
+                  <option value="Web App Development">Web Application Development</option>
+                  <option value="ERP Solutions & Support">ERP Solutions &amp; Support</option>
+                  <option value="Digital Transformation">Digital Transformation</option>
+                  <option value="Technology Consulting">Technology Consulting</option>
+                  <option value="Business Process Solutions">Business Process Solutions</option>
+                  <option value="IT Staffing & Augmentation">IT Staffing &amp; Resource Augmentation</option>
+                  <option value="Project Management">Project Management &amp; Consulting</option>
+                  <option value="Infrastructure & Engineering">Infrastructure &amp; Engineering</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="contactTimeline" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                  Project Timeline
+                </label>
+                <select id="contactTimeline" name="timeline" class="form-control">
+                  <option value="Immediate">Immediate (&lt; 1 month)</option>
+                  <option value="1 to 3 Months">1 to 3 Months</option>
+                  <option value="3 to 6 Months">3 to 6 Months</option>
+                  <option value="RFP / Exploration">RFP / Exploratory</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="contactMessage" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                Brief Scope / Message <span class="text-red-500">*</span>
+              </label>
+              <textarea id="contactMessage" name="message" rows="4" required class="form-control" placeholder="Describe your technology goals, team size needs, or consultation requirements..."></textarea>
+            </div>
+
+            <div class="pt-2">
+              <button type="submit" class="btn-peacock w-full sm:w-auto px-8 py-3 text-sm justify-center">
+                <span>Submit Corporate Inquiry</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </button>
+              <p class="text-[11px] text-slate-400 mt-2">
+                By submitting, your inquiry will be routed securely to info@peacockshine.com. We respect your confidentiality.
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- LOCATION & MAP VISUAL SECTION -->
+    <div class="mt-16 bg-white border border-slate-200 rounded-2xl p-8 shadow-sm">
+      <div class="flex flex-col md:flex-row md:items-center justify-between mb-6 gap-4">
+        <div>
+          <h3 class="text-xl font-bold text-slate-900">Regional Footprint: Mysore &ndash; Nanjangud Corridor</h3>
+          <p class="text-slate-600 text-xs sm:text-sm mt-1">
+            Strategically located near Karnataka's premier tech clusters with fast connectivity to Bangalore and international transit hubs.
+          </p>
+        </div>
+        <div class="inline-flex items-center gap-2 bg-slate-100 text-slate-700 px-3 py-1.5 rounded-lg text-xs font-semibold">
+          <span>PIN: 571301</span> &bull; <span>Karnataka, India</span>
+        </div>
+      </div>
+
+      <!-- Map Presentation Graphic -->
+      <div class="relative w-full h-64 sm:h-80 bg-slate-100 rounded-xl overflow-hidden border border-slate-200 flex items-center justify-center">
+        <!-- Interactive Simulated Map Overlay -->
+        <div class="absolute inset-0 bg-cover bg-center opacity-80" style="background-image: url('https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1400&q=80');"></div>
+        <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-[2px]"></div>
+        
+        <div class="relative z-10 text-center p-6 max-w-md bg-white/95 rounded-xl shadow-2xl border border-slate-200">
+          <div class="w-10 h-10 mx-auto rounded-full bg-teal-100 text-teal-700 flex items-center justify-center mb-3">
+            <svg class="w-5 h-5 text-teal-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+          </div>
+          <h4 class="font-bold text-slate-900 text-base">Peacock Shine Private Limited</h4>
+          <p class="text-xs text-slate-600 mt-1">Chamalapura Street, Nanjangud Town, Mysore, Karnataka 571301</p>
+          <div class="mt-4 flex justify-center gap-3">
+            <a href="https://maps.google.com/?q=Nanjangud+Mysore+Karnataka" target="_blank" rel="noopener noreferrer" class="btn-peacock text-xs py-2 px-4">
+              Open in Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="corporate-footer pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
+        <div class="lg:col-span-2 space-y-4">
+          <img src="images/peacock-shine-logo-white.svg" alt="Peacock Shine Private Limited" class="h-11 w-auto max-w-[280px]">
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed pr-6">
+            Peacock Shine Private Limited delivers innovative, reliable and cost-effective consulting and technology solutions across enterprise domains.
+          </p>
+        </div>
+        <div>
+          <h5>Solutions</h5>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="solutions.html#mobile-app">Mobile App Development</a></li>
+            <li><a href="solutions.html#web-app">Web App Development</a></li>
+            <li><a href="solutions.html#erp-solutions">ERP Solutions &amp; Support</a></li>
+            <li><a href="solutions.html#digital-transformation">Digital Transformation</a></li>
+            <li><a href="solutions.html#tech-consulting">Technology Consulting</a></li>
+            <li><a href="solutions.html#business-process">Business Process Solutions</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Services</h5>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="services.html#app-dev">Application Development</a></li>
+            <li><a href="services.html#staffing">IT Staffing &amp; Augmentation</a></li>
+            <li><a href="services.html#project-mgmt">Project Management</a></li>
+            <li><a href="services.html#tech-services">Professional Tech Services</a></li>
+            <li><a href="services.html#enterprise-solutions">Enterprise Solutions</a></li>
+            <li><a href="services.html#mgmt-consulting">Management Consulting</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Corporate Office</h5>
+          <address class="not-italic text-xs text-slate-400 space-y-2.5 leading-relaxed">
+            <p class="font-bold text-slate-200">PEACOCK SHINE PRIVATE LIMITED</p>
+            <p>
+              No. 1889/1, First Floor, Chamalapura Street,<br>
+              8th Ward, Nanjangud Town (Rural),<br>
+              Mysore, Karnataka, India &ndash; 571301.
+            </p>
+            <p class="pt-1">
+              <strong class="text-slate-200">Email:</strong><br>
+              <a href="mailto:info@peacockshine.com" class="text-cyan-400 hover:underline">info@peacockshine.com</a>
+            </p>
+            <p>
+              <strong class="text-slate-200">Phone:</strong><br>
+              <a href="tel:+917569592985" class="text-cyan-400 hover:underline">+91 7569592985</a>
+            </p>
+          </address>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
+        <p>&copy; <span class="current-year">2026</span> Peacock Shine Private Limited. All Rights Reserved.</p>
+        <div class="flex items-center space-x-6">
+          <a href="about.html" class="hover:text-slate-300">About Us</a>
+          <a href="industries.html" class="hover:text-slate-300">Industries</a>
+          <a href="contact.html" class="hover:text-slate-300">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="toastNotification">
+    <svg class="w-5 h-5 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+    <span id="toastMessage" class="text-sm font-medium">Notification message</span>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
