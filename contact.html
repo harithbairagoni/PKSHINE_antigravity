@@ -275,27 +275,83 @@
         </div>
       </div>
 
-      <!-- Map Presentation Graphic -->
-      <div class="relative w-full h-64 sm:h-80 bg-slate-100 rounded-xl overflow-hidden border border-slate-200 flex items-center justify-center">
-        <!-- Interactive Simulated Map Overlay -->
-        <div class="absolute inset-0 bg-cover bg-center opacity-80" style="background-image: url('https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1400&q=80');"></div>
-        <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-[2px]"></div>
-        
-        <div class="relative z-10 text-center p-6 max-w-md bg-white/95 rounded-xl shadow-2xl border border-slate-200">
-          <div class="w-10 h-10 mx-auto rounded-full bg-teal-100 text-teal-700 flex items-center justify-center mb-3">
-            <svg class="w-5 h-5 text-teal-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+      <!-- Live Interactive Google Map Embed -->
+      <div class="relative w-full h-80 sm:h-96 rounded-xl overflow-hidden border border-slate-200 shadow-inner">
+        <iframe 
+          title="Peacock Shine Corporate Office Location" 
+          src="https://maps.google.com/maps?q=Nanjangud,+Mysore,+Karnataka+571301&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+          width="100%" 
+          height="100%" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+
+    <!-- CORPORATE FAQ ACCORDION -->
+    <div class="mt-16 bg-white border border-slate-200 rounded-2xl p-8 shadow-sm space-y-6">
+      <div class="max-w-2xl">
+        <span class="badge-tag">Corporate Governance FAQ</span>
+        <h3 class="text-2xl font-bold text-slate-900 mt-2">Frequently Asked Questions</h3>
+        <p class="text-slate-600 text-sm mt-1">Key operational details on onboarding, data confidentiality, and engagement governance.</p>
+      </div>
+
+      <div class="space-y-4 pt-2">
+        <!-- FAQ 1 -->
+        <div class="faq-item">
+          <div class="faq-header">
+            <span class="font-bold text-slate-900 text-sm sm:text-base">How quickly can technical specialists or project pods be deployed?</span>
+            <span class="faq-icon">+</span>
           </div>
-          <h4 class="font-bold text-slate-900 text-base">Peacock Shine Private Limited</h4>
-          <p class="text-xs text-slate-600 mt-1">Chamalapura Street, Nanjangud Town, Mysore, Karnataka 571301</p>
-          <div class="mt-4 flex justify-center gap-3">
-            <a href="https://maps.google.com/?q=Nanjangud+Mysore+Karnataka" target="_blank" rel="noopener noreferrer" class="btn-peacock text-xs py-2 px-4">
-              Open in Google Maps
-            </a>
+          <div class="faq-body">
+            For standard IT staffing and resource augmentation, pre-vetted engineers are typically ready for client review within 48 to 72 hours, with onboarding completed within 5 to 10 business days. For turnkey fixed-scope projects, project kickoff follows brief architectural discovery and SLA agreement.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+          <div class="faq-header">
+            <span class="font-bold text-slate-900 text-sm sm:text-base">How does Peacock Shine protect client IP and commercial confidentiality?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-body">
+            All engagements are governed by strict bilateral Non-Disclosure Agreements (NDAs) executed prior to any technical disclosure. All source code, architectural artifacts, and proprietary data produced under contract remain the 100% exclusive intellectual property of the client organization.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+          <div class="faq-header">
+            <span class="font-bold text-slate-900 text-sm sm:text-base">What contract and billing structures do you support?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-body">
+            We offer transparent, flexible commercial models tailored to project scope: Time &amp; Material (T&amp;M) for agile teams, Fixed-Price Milestone Delivery for turnkey projects, and Dedicated Monthly FTE Retainers for managed Offshore Development Centers (ODC).
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+          <div class="faq-header">
+            <span class="font-bold text-slate-900 text-sm sm:text-base">Do you serve domestic clients across India and international clients globally?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-body">
+            Yes. Headquartered in Karnataka, Peacock Shine operates a hybrid delivery model serving enterprise clients across India as well as international partners in North America, Europe, and the APAC region with multi-timezone support and SLA coverage.
           </div>
         </div>
       </div>
     </div>
   </div>
+
+  <!-- Floating WhatsApp & Direct Inquiry Button -->
+  <a href="https://wa.me/917569592985" target="_blank" rel="noopener noreferrer" class="floating-inquiry-pill" aria-label="Direct Consultation via WhatsApp">
+    <span class="floating-pulse"></span>
+    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+    <span>Instant WhatsApp</span>
+  </a>
 
   <!-- FOOTER -->
   <footer class="corporate-footer pt-16 pb-12">
